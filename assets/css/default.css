@@ -1,0 +1,6 @@
+div#post, div#home {
+    margin: 8em;
+}
+div.footer, div.title {
+    text-align: center;
+}
