@@ -1,0 +1,30 @@
+<script type="text/x-template" id="navbar-template">
+<nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
+  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item <%- activeSection === "posts" ? "active" : "" %>">
+        <a class="nav-link" href="#" section='posts'><%- home %></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Games
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/math4pupil">Math for pupil</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item <%- activeSection === "profile" ? "active" : "" %>">
+        <a class="nav-link" href="#" section='profile'><%- about %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" id="changeLocale" locale="<%- locale %>"><%- locale %></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</script>

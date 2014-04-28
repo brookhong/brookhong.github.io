@@ -1,0 +1,4 @@
+highlighter: rouge
+permalink: /:year/:month/:day/:title.html
+plugins:
+  - jekyll-seo-tag

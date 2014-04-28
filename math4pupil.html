@@ -1,0 +1,68 @@
+---
+layout: default
+title: Simple math for pupil
+---
+
+<style>
+#mathContentWraper {
+    font-size: 18pt;
+    width: 90%;
+    margin: 10px 5%;
+}
+#mathContent input {
+    outline: none;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-width: thick;
+    border-bottom-color: #7f7f84;
+    background: #c3e6fb;
+}
+#creditFace {
+    position: absolute;
+    z-index: 10;
+}
+
+#mathResultSummary>div {
+    display: inline-block;
+    width: 40%;
+}
+#mathResultSummary>div>span {
+    padding-left: 10px;
+}
+#mathResultSummary>div.failure {
+    cursor: pointer;
+    color: blue;
+}
+#mathResult>div.failedTests {
+    background: #f1f1f1;
+    display: none;
+}
+
+@keyframes slideOutRight {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.slideOutRight {
+    opacity: 0;
+    animation: 0.8s ease-in-out 1 forwards slideOutRight;
+}
+</style>
+
+{% include template/math4pupil.html %}
+
+<div id="mathContentWraper">
+    <div id="mathContent"></div>
+    <div id="mathResult"></div>
+    <div id="creditFace" style="display: none"></div>
+</div>
+<div class="alert alert-primary" role="alert">Press Enter or Tab to confirm your input.</div>
+<audio src="/assets/audio/yes.mp3" />
+
+<script src="/assets/lib/require.js" data-main="/assets/js/math4pupil.js"></script>

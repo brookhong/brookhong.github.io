@@ -1,0 +1,177 @@
+div#toc {
+    position: fixed;
+    right: 10px;
+    top: 80px;
+    width: 20%;
+}
+div#toc li {
+    font-size: 10pt;
+    cursor: pointer;
+    color: blue;
+}
+
+div.footer, div.title {
+    text-align: center;
+}
+
+div#content {
+    width: 80%;
+    padding-left: 18%;
+    font-size: medium;
+}
+div#content img {
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 1px solid #cccc;
+}
+#imgPopup {
+    position: fixed;
+    z-index: 1033;
+    width: 100%;
+    height: 100%;
+    background: #000000a6;
+    top: 0;
+    left: 0;
+}
+#imgPopup > img {
+    margin: auto;
+    display: block;
+    padding-top: 10%;
+    max-width: 80%;
+    max-height: 80%;
+}
+div#content p > code,
+div#content li > code
+{
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    font-size: 85%;
+    background-color: rgba(0,0,0,0.04);
+    border-radius: 3px;
+}
+div#content p > code::before,
+div#content p > code::after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+div#content pre {
+    padding: 12px;
+    background: #eee;
+    border-radius: 2px;
+    border: 1px solid #e0e0e0;
+    border-left-width: 4px;
+    word-wrap: break-word;
+}
+div#content .section {
+    display: none;
+}
+
+div#content h2 {
+    margin-top: 1em;
+}
+
+div#content {
+    margin-top: 80px;
+    box-sizing: border-box;
+}
+
+div#content table th {
+    font-weight: bold;
+}
+
+div#content table th,
+div#content table td {
+    padding: 6px 13px;
+    border: 1px solid #ddd;
+}
+
+div#content table tr {
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+}
+
+div#content table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font: 125%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #55f;
+    color: #fff;
+}
+@media only screen and (max-width: 767px) {
+    div#toc, div#menu {
+        display: none;
+    }
+    div#content {
+        width: 100%;
+        padding: 4px;
+    }
+    width: 80%;
+}
+////////////////////////////////////////////////////////////////////////////////
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
+    display: none;
+}
+
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+.tip {
+    stroke: green;
+    font: 19px sans-serif;
+}
+.state {
+    cursor: pointer;
+}
+.button {
+    cursor: pointer;
+    stroke: blue;
+    font: 12px sans-serif;
+}
+.overlay {
+    cursor: move;
+    fill: none;
+    pointer-events: all;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
+    stroke: #000;
+}
+
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}

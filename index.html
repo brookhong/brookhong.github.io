@@ -1,0 +1,30 @@
+---
+layout: default
+title: Brook Hong
+---
+
+<div class='section profile English'>
+    {% include about.html %}
+</div>
+
+<div class='section posts English'>
+    <ul class="posts">
+        {% for post in site.categories.en %}
+        <li><span>{{ post.date | date: "%m/%d/%Y" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class='section profile 中文'>
+    {% include about_cn.html %}
+</div>
+
+<div class='section posts 中文'>
+    <ul class="posts">
+        {% for post in site.categories.cn %}
+        <li><span>{{ post.date | date: "%Y-%m-%d" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+<script src="/assets/lib/require.js" data-main="/assets/js/home.js"></script>

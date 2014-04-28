@@ -1,0 +1,33 @@
+<script type="text/x-template" id="math-set-template">
+    <div>
+    <span>Max number allowed: </span>
+    <input type=number style="width: 70px" />
+    </div>
+</script>
+<script type="text/x-template" id="math-content-template">
+    <div>
+    <span><%- para1 %></span>
+    <span><%- operator1 %></span>
+    <span><%- para2 %></span>
+    <span>=</span>
+    <input type=number style="width: 70px" />
+    </div>
+</script>
+<script type="text/x-template" id="math-result-template">
+    <div id="mathResultSummary">
+        <div class="success">😁<span><%- success %></span></div>
+        <div class="failure">😢<span><%- failure %></span></div>
+        <div class="timing"><%- timing %></div>
+    </div>
+    <div class="failedTests">
+    <% for(var i = 0; i < failedTests.length; ++i) { %>
+        <div>
+        <span><%- failedTests[i].para1 %></span>
+        <span><%- failedTests[i].operator1 %></span>
+        <span><%- failedTests[i].para2 %></span>
+        <span>!=</span>
+        <span><%- failedTests[i].answer %></span>
+        </div>
+    <% } %>
+    </div>
+</script>
