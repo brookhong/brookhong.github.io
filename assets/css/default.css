@@ -4,3 +4,6 @@ div#post, div#home {
 div.footer, div.title {
     text-align: center;
 }
+div#home h2 {
+    margin-top: 3em;
+}
