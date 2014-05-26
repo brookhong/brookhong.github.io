@@ -15,6 +15,20 @@ keystroke visualizer for Windows,  lets you easily display your keystrokes while
 
 [download](/assets/downloads/keycastow.zip) | [report issues](https://github.com/brookhong/brookhong.github.io/issues)
 
+## History
+
+### 2014-05-26 2.0.0.1 released
+* flicker free
+* anti-aliasing rounded corner
+* opacity settings for text/background/border
+* settings preview in dialog
+* branding string on screen
+* fixed some bugs
+
+![Screencast of keycastow](/assets/images/keycastow2.gif)
+
+### 2014-04-28 1.0.0.1 released
+
 As MAC user, I use [keycastr](https://github.com/sdeken/keycastr), an open-source keystroke visualizer to create tech demo animation.
 
 I'm also a Windows user, I googled alternatives of keycastr for windows several times.
@@ -37,6 +51,7 @@ Here we go.
 
 Other demo for k.vim.
 
+![Screencast of KeyCastOW](http://drp.io/files/536124ae9a4f9.gif)
 ![Screencast of K.vim](http://drp.io/files/5357c687a659a.gif)
 
 The animations are created with [LICEcap](http://www.cockos.com/licecap/)
