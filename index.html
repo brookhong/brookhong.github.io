@@ -18,4 +18,16 @@ title: Brook Hong
         <li>A command line tool to read text with Microsoft Speech API (SAPI) &raquo; <a href="https://github.com/brookhong/tts">source</a> | <a href="/assets/downloads/tts.zip">download Windows Binary</a></li>
         <li>A plugin to enable php/python debug in VIM with XDebug &raquo; <a href="https://github.com/brookhong/DBGPavim">source</a> | <a href="http://www.vim.org/scripts/script.php?script_id=4059">Release on vim.org</a></li>
     </ul>
+
+    <h2>Online Tools</h2>
+    <h3>QRCode Generator</h3>
+    <div>
+        <textarea id="text" type="text" style="width:50%;height:50%" rows=20></textarea>
+        <img src="" id="qrimg"/>
+        <script type="text/javascript">
+        $("#text").on("blur", function () {
+            $('#qrimg').attr('src', "http://chart.apis.google.com/chart?chs=300x300&cht=qr&chl="+encodeURI($('#text').val()));
+        });
+        </script>
+    </div>
 </div>
