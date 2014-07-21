@@ -23,10 +23,20 @@ title: Brook Hong
     <h3>QRCode Generator</h3>
     <div>
         <textarea id="text" type="text" style="width:50%;height:50%" rows=20></textarea>
-        <img src="" id="qrimg"/>
+        <div id="qrcode" style="display:inline-block;"></div>
         <script type="text/javascript">
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            width : 300,
+            height : 300
+        });
         $("#text").on("blur", function () {
-            $('#qrimg').attr('src', "http://chart.apis.google.com/chart?chs=300x300&cht=qr&chl="+encodeURI($('#text').val()));
+            var elText = document.getElementById("text");
+            if (!elText.value) {
+                alert("Input a text");
+                elText.focus();
+                return;
+            }
+            qrcode.makeCode(elText.value);
         });
         </script>
     </div>
