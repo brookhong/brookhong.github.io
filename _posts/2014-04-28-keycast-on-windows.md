@@ -17,7 +17,12 @@ keystroke visualizer for Windows,  lets you easily display your keystrokes while
 
 ## History
 
-### 2014-05-26 2.0.0.1 released
+### 2014-08-27 2.0.0.2
+* fixed issue [Doesn't display Shift key](https://github.com/brookhong/brookhong.github.io/issues/5)
+
+![Screencast of keycastow](/assets/images/keycastow_shift.gif)
+
+### 2014-05-26 2.0.0.1
 * flicker free
 * anti-aliasing rounded corner
 * opacity settings for text/background/border
@@ -26,8 +31,9 @@ keystroke visualizer for Windows,  lets you easily display your keystrokes while
 * fixed some bugs
 
 ![Screencast of keycastow](/assets/images/keycastow2.gif)
+![settings of keycastow](/assets/images/keycastow.png)
 
-### 2014-04-28 1.0.0.1 released
+### 2014-04-28 1.0.0.1
 
 As MAC user, I use [keycastr](https://github.com/sdeken/keycastr), an open-source keystroke visualizer to create tech demo animation.
 
@@ -47,7 +53,6 @@ And I do have some window operations started with `<Space>`.
 Here we go.
 
 ![Screencast of keycastow](/assets/images/keycastow.gif)
-![settings of keycastow](/assets/images/keycastow.png)
 
 Other demo for k.vim.
 
