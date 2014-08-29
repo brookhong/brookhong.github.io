@@ -31,12 +31,9 @@ title: Brook Hong
         });
         $("#text").on("blur", function () {
             var elText = document.getElementById("text");
-            if (!elText.value) {
-                alert("Input a text");
-                elText.focus();
-                return;
+            if (elText.value) {
+                qrcode.makeCode(elText.value);
             }
-            qrcode.makeCode(elText.value);
         });
         </script>
     </div>
