@@ -17,6 +17,10 @@ keystroke visualizer for Windows,  lets you easily display your keystrokes while
 
 ## History
 
+### 2014-09-23 2.0.0.3
+* fixed bug [Y(offset to left bottom corner) not working in settings](https://github.com/brookhong/brookhong.github.io/issues/8)
+* new feature [Display only command keys](https://github.com/brookhong/brookhong.github.io/issues/7)
+
 ### 2014-08-27 2.0.0.2
 * fixed issue [Doesn't display Shift key](https://github.com/brookhong/brookhong.github.io/issues/5)
 
