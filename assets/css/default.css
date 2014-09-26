@@ -1,9 +1,24 @@
-div#post, div#home {
+div#menu {
     margin: 8em;
+    vertical-align: top;
 }
+
+div#menu li {
+    list-style: none;
+    font-size: 160%
+}
+
+div#menu a {
+    text-decoration: none;
+}
+
 div.footer, div.title {
     text-align: center;
 }
-div#home h2 {
+div#content h2 {
     margin-top: 3em;
+}
+div#content, div#menu {
+    margin-top: 3em;
+    display: inline-block;
 }

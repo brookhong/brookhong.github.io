@@ -1,6 +1,7 @@
 ---
 layout: post
 title: KeyCastOW -- keycast on windows
+category: en
 ---
 
 {{ page.title }}

@@ -1,0 +1,36 @@
+---
+layout: cn
+title: Brook Hong
+---
+
+<div id="home">
+
+    <ul class="posts">
+        {% for post in site.categories.cn %}
+        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <ul class="projects">
+        <li>命令行字典工具 &raquo; <a href="https://github.com/brookhong/kv">源码</a> | <a href="/assets/downloads/kv.zip">下载</a></li>
+        <li>基于Microsoft Speech API (SAPI) 文本语音阅读命令行工具&raquo; <a href="https://github.com/brookhong/tts">源码</a> | <a href="/assets/downloads/tts.zip">下载</a></li>
+        <li>用于PHP/Python调试的VIM插件 &raquo; <a href="https://github.com/brookhong/DBGPavim">源码</a> | <a href="http://www.vim.org/scripts/script.php?script_id=4059">vim.org</a></li>
+        <li>二维码生成器</li>
+    </ul>
+    <div>
+        <textarea id="text" type="text" style="width:50%;height:50%" rows=20></textarea>
+        <div id="qrcode" style="display:inline-block;"></div>
+        <script type="text/javascript">
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            width : 300,
+            height : 300
+        });
+        $("#text").on("blur", function () {
+            var elText = document.getElementById("text");
+            if (elText.value) {
+                qrcode.makeCode(elText.value);
+            }
+        });
+        </script>
+    </div>
+</div>
