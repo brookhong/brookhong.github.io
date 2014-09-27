@@ -17,7 +17,11 @@ div#content {
     width: 50%;
     font-size: small;
 }
-
+div#content p > code {
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    background-color: rgba(0,0,0,0.1);
+}
 div#content pre {
     padding: 12px;
     border: 1px solid #333;
