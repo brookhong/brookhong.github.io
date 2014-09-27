@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_cn
 title: KeyCastOW -- Windows下的按键显示
 category: cn
 ---

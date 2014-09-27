@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="/assets/css/default.css" type="text/css" />
 <script type="text/javascript" src="/assets/js/qrcode.min.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.cookie.js"></script>
 
 </head>
 <body>
@@ -17,19 +18,24 @@
         <a href="/cn.html">主页</a> | <a href="/">English</a>
     </div>
 
+    <div id="menu">
+        <ul>
+            <li><a href="#" section='profile'>关于</a></li>
+            <li><a href="#" section='posts'>文章</a></li>
+            <li><a href="#" section='projects'>项目</a></li>
+            <li><a href="#" section='tools'>工具</a></li>
+        </ul>
+    </div>
+
     {{ content }}
 
     <div class="footer">
         <div class="contact">
-            <p>Brook Hong</p>
-        </div>
-        <div class="contact">
-            <p>
             <a href="http://github.com/brookhong/">github.com/brookhong</a><br />
-            </p>
         </div>
     </div>
 </div>
 
+<script type="text/javascript" src="/assets/js/default.js"></script>
 </body>
 </html>

@@ -1,24 +1,50 @@
 div#menu {
     margin: 8em;
     vertical-align: top;
+    width: 12%;
 }
 
 div#menu li {
     list-style: none;
-    font-size: 160%
-}
-
-div#menu a {
-    text-decoration: none;
+    font-size: 120%
 }
 
 div.footer, div.title {
     text-align: center;
 }
+
+div#content {
+    width: 50%;
+    font-size: small;
+}
+
+div#content pre {
+    padding: 12px;
+    border: 1px solid #333;
+    background-color: #aaa;
+}
+div#content .section {
+    display: none;
+}
+
 div#content h2 {
     margin-top: 3em;
 }
+
 div#content, div#menu {
     margin-top: 3em;
     display: inline-block;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font: 125%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
 }

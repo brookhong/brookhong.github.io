@@ -5,33 +5,32 @@ title: Brook Hong
 
 <div id="content">
 
-    <ul class="posts">
-        {% for post in site.categories.en %}
-        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-    </ul>
+    <div class='section profile'>
+        Hi, this is Brook, currently a Software Developer in Adobe(will leave the company at Dec 19th).
+        <p>I mostly program with C/C++, kindly take a look at KeyCastOW, kv, tts and wikenotes.  Also happily involved in VIM plugin development with python, like DBGPavim and cloudboard.vim.</p>
+    </div>
 
-    <ul class="projects">
-        <li>A command line dictionary tool &raquo; <a href="https://github.com/brookhong/kv">source</a> | <a href="/assets/downloads/kv.zip">download Windows Binary</a></li>
-        <li>A command line tool to read text with Microsoft Speech API (SAPI) &raquo; <a href="https://github.com/brookhong/tts">source</a> | <a href="/assets/downloads/tts.zip">download Windows Binary</a></li>
-        <li>A plugin to enable php/python debug in VIM with XDebug &raquo; <a href="https://github.com/brookhong/DBGPavim">source</a> | <a href="http://www.vim.org/scripts/script.php?script_id=4059">Release on vim.org</a></li>
-        <li>QRCode Generator</li>
-    </ul>
+    <div class='section posts'>
+        <ul class="posts">
+            {% for post in site.categories.en %}
+            <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
 
-    <div>
-        <textarea id="text" type="text" style="width:50%;height:50%" rows=20></textarea>
-        <div id="qrcode" style="display:inline-block;"></div>
-        <script type="text/javascript">
-        var qrcode = new QRCode(document.getElementById("qrcode"), {
-            width : 300,
-            height : 300
-        });
-        $("#text").on("blur", function () {
-            var elText = document.getElementById("text");
-            if (elText.value) {
-                qrcode.makeCode(elText.value);
-            }
-        });
-        </script>
+    <div class='section projects'>
+        <ul class="projects">
+            <li>A command line dictionary tool &raquo; <a href="https://github.com/brookhong/kv">source</a> | <a href="/assets/downloads/kv.zip">download Windows Binary</a></li>
+            <li>A command line tool to read text with Microsoft Speech API (SAPI) &raquo; <a href="https://github.com/brookhong/tts">source</a> | <a href="/assets/downloads/tts.zip">download Windows Binary</a></li>
+            <li>A plugin to enable php/python debug in VIM with XDebug &raquo; <a href="https://github.com/brookhong/DBGPavim">source</a> | <a href="http://www.vim.org/scripts/script.php?script_id=4059">Release on vim.org</a></li>
+        </ul>
+    </div>
+
+    <div class='section tools'>
+        <h3>QRCode Generator</h3>
+        <div>
+            <textarea id="text" type="text" style="width:50%;height:50%" rows=20></textarea>
+            <div id="qrcode" style="display:inline-block;"></div>
+        </div>
     </div>
 </div>
