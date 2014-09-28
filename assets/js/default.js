@@ -18,11 +18,11 @@ $('#menu a').click(function() {
 $('a[locale]').click(function() {
     $.cookie('locale', $(this).attr('locale'), { path: '/' });
 });
-if(isEnglish() && $.cookie('locale') == 'cn') {
-    $(location).attr('href', '/cn.html');
-}
 
 if(isHomePage()) {
+    if(isEnglish() && $.cookie('locale') == 'cn') {
+        $(location).attr('href', '/cn.html');
+    }
     var ss = 'profile';
     if($.cookie('section') !== undefined) {
         ss = $.cookie('section');
