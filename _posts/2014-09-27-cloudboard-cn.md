@@ -20,6 +20,7 @@ vim本身必须支持python, 可以使用命令`:python print 'hello'`试试。
 ### 使用方法
 
 1. 运行命令`:CBInit`设置你的云剪贴板。
+
 1. `v`进入选择模式，选中你要复制的内容，运行命令`:CBYank 0`把选中的内容复制到0号云寄存器。
 
     ![cbyank](/assets/images/cbyank.gif)
