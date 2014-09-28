@@ -15,17 +15,18 @@ div.footer, div.title {
 
 div#content {
     width: 50%;
-    font-size: small;
+    font-size: medium;
 }
 div#content p > code {
     padding-top: 0.2em;
     padding-bottom: 0.2em;
-    background-color: rgba(0,0,0,0.1);
+    background: #b4d5e4;
+    border-radius: 2px;
 }
 div#content pre {
     padding: 12px;
-    border: 1px solid #333;
-    background-color: #aaa;
+    background: #b4d5e4;
+    border-radius: 8px;
 }
 div#content .section {
     display: none;
@@ -50,5 +51,6 @@ a {
 }
 
 a:hover {
-  font-weight: bold;
+    background-color: #55f;
+    color: #fff;
 }
