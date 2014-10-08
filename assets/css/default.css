@@ -27,6 +27,8 @@ div#content pre {
     padding: 12px;
     background: #b4d5e4;
     border-radius: 8px;
+    border: 1px solid #a8cddf;
+    box-shadow: 3px 3px 3px #deedf3;
 }
 div#content .section {
     display: none;

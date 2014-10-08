@@ -8,8 +8,13 @@ $('#menu a').click(function() {
     var ss = $(this).attr('section');
     $.cookie('section', ss, { path: '/' });
     if(!isHomePage()) {
-        var homeUrl = isEnglish() ? '/' : '/cn.html';
-        $(location).attr('href', homeUrl);
+        if(isEnglish()) {
+            $.cookie('locale', 'en', { path: '/' });
+            $(location).attr('href', '/');
+        } else {
+            $.cookie('locale', 'cn', { path: '/' });
+            $(location).attr('href', '/cn.html');
+        }
     } else {
         $('#content').find('.section').hide();
         $('#content').find('.' + ss).show();
