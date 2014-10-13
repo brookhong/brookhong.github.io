@@ -53,9 +53,4 @@ Windows按键显示软件，显示你的按键操作，可用于录制教学视�
 
 ![Screencast of keycastow](/assets/images/keycastow.gif)
 
-还有k.vim的演示。
-
-![Screencast of KeyCastOW](http://drp.io/files/536124ae9a4f9.gif)
-![Screencast of K.vim](http://drp.io/files/5357c687a659a.gif)
-
 以上演示使用[LICEcap](http://www.cockos.com/licecap/) 和 [KeyCastOW](/assets/downloads/keycastow.zip)制作。

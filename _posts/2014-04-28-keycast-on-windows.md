@@ -59,10 +59,5 @@ Here we go.
 
 ![Screencast of keycastow](/assets/images/keycastow.gif)
 
-Other demo for k.vim.
-
-![Screencast of KeyCastOW](http://drp.io/files/536124ae9a4f9.gif)
-![Screencast of K.vim](http://drp.io/files/5357c687a659a.gif)
-
 The animations are created with [LICEcap](http://www.cockos.com/licecap/)
 plus [KeyCastOW](/assets/downloads/keycastow.zip).
