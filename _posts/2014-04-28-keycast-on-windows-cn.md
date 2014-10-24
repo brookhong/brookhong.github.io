@@ -19,6 +19,11 @@ Windows按键显示软件，显示你的按键操作，可用于录制教学视�
 
 ## 更新历史
 
+### 2014-10-24 2.0.0.6
+
+* [支持多显示器](https://github.com/brookhong/brookhong.github.io/issues/11)
+* 移动设置对话框可设置按键显示位置
+
 ### 2014-09-23 2.0.0.3
 * 修改缺陷 [Y(offset to left bottom corner) 不好使](https://github.com/brookhong/brookhong.github.io/issues/8)
 * 实现新功能 [只显示命令键](https://github.com/brookhong/brookhong.github.io/issues/7)

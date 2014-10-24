@@ -18,6 +18,11 @@ keystroke visualizer for Windows,  lets you easily display your keystrokes while
 
 ## History
 
+### 2014-10-24 2.0.0.6
+
+* [Support multiple monitors](https://github.com/brookhong/brookhong.github.io/issues/11)
+* Drag settings dialog to set position for keystroke display
+
 ### 2014-09-23 2.0.0.3
 * fixed bug [Y(offset to left bottom corner) not working in settings](https://github.com/brookhong/brookhong.github.io/issues/8)
 * new feature [Display only command keys](https://github.com/brookhong/brookhong.github.io/issues/7)

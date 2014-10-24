@@ -57,4 +57,16 @@ Chrome中的Developer Tools里有个Network页，可以监控浏览器出去的�
     --cacert /d/owasp_zap_root_ca.cer   告诉curl使用ZAP证书
     ***********                         隐藏信息，用你自己的
 
+### 其他程序可以通过设置环境变量http_proxy, https_proxy来试试
+
+*nix
+
+    export http_proxy='http://127.0.0.1:8080'
+    export https_proxy='http://127.0.0.1:8080'
+
+Windows
+
+    set http_proxy=127.0.0.1:8080
+    set https_proxy=127.0.0.1:8080
+
 最后，因为各种浏览器也是一种HTTP/HTTPS客户端，当然也可以使用zaproxy拦截你浏览器发出去的请求，只要把浏览器使用的代理设置成zaproxy所提供的，访问HTTPS服务也同样需要安装ZAP证书。
