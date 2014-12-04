@@ -19,8 +19,10 @@ Windows按键显示软件，显示你的按键操作，可用于录制教学视�
 
 ## 更新历史
 
-### 2014-10-24 2.0.0.6
+### 2014-12-04 2.0.0.7
+* [支持鼠标动作捕捉](https://github.com/brookhong/brookhong.github.io/issues/12)，默认是打开的，从设置里可以关闭。
 
+### 2014-10-24 2.0.0.6
 * [支持多显示器](https://github.com/brookhong/brookhong.github.io/issues/11)
 * 移动设置对话框可设置按键显示位置
 

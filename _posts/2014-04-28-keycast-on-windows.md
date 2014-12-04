@@ -18,8 +18,10 @@ keystroke visualizer for Windows,  lets you easily display your keystrokes while
 
 ## History
 
-### 2014-10-24 2.0.0.6
+### 2014-12-04 2.0.0.7
+* [support mouse actions capturing](https://github.com/brookhong/brookhong.github.io/issues/12), turned on by default, can be turned off from settings.
 
+### 2014-10-24 2.0.0.6
 * [Support multiple monitors](https://github.com/brookhong/brookhong.github.io/issues/11)
 * Drag settings dialog to set position for keystroke display
 
