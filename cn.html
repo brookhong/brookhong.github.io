@@ -6,19 +6,7 @@ title: Brook Hong
 <div id="content">
 
     <div class='section profile'>
-        <p>你好，我是一名Adobe的软件工程师（<a href="http://tech.163.com/14/0924/16/A6U0SB17000915BD.html">12月马上要离职了</a>）。</p>
-
-        <p>工作中用过的技术有：</p>
-        <ul>
-            <li>2012.02 - 现在    &raquo; linux的php，主要使用symfony库，各平台下的java，linux的python/mongodb，javascript主要使用各种跨浏览器的JS库如jQuery/D3/prototype等。</li>
-            <li>2011.09 - 2012.01 &raquo; mac下的actionscript(AIR)</li>
-            <li>2010.12 - 2011.08 &raquo; linux下的ruby，windows下的java。</li>
-            <li>2009.01 - 2010.12 &raquo; windows下的c++，主要使用Win32 API和Boost。</li>
-            <li>2007.04 - 2008.11 &raquo; linux下的c++，主要使用QT。</li>
-            <li>2005.05 - 2007.03 &raquo; windows下的c++，主要使用Win32 API/STL/WTL这些库。</li>
-        </ul>
-
-        <p>业余时间我用c/c++写程序写得稍多些，像<a href="/2014/04/28/keycast-on-windows-cn.html">KeyCastOW</a>, <a href="https://github.com/brookhong/kv">kv</a>, <a href="https://github.com/brookhong/tts">tts</a> 和 <a href="https://github.com/brookhong/wikenotes">wikenotes</a>，也常用python开发一些vim的插件，比如<a href="/2014/09/27/dbgpavim-cn.html">DBGPavim</a>和<a href="/2014/09/27/cloudboard-cn.html">cloudboard.vim</a>。</p>
+        {% markdown about_cn.md %}
     </div>
 
     <div class='section posts'>
@@ -26,14 +14,6 @@ title: Brook Hong
             {% for post in site.categories.cn %}
             <li><span>{{ post.date | date: "%Y-%m-%d" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
             {% endfor %}
-        </ul>
-    </div>
-
-    <div class='section projects'>
-        <ul class="projects">
-            <li>命令行字典工具 &raquo; <a href="https://github.com/brookhong/kv">源码</a> | <a href="/assets/downloads/kv.zip">下载</a></li>
-            <li>基于Microsoft Speech API (SAPI) 文本语音阅读命令行工具&raquo; <a href="https://github.com/brookhong/tts">源码</a> | <a href="/assets/downloads/tts.zip">下载</a></li>
-            <li>用于PHP/Python调试的VIM插件 &raquo; <a href="https://github.com/brookhong/DBGPavim">源码</a> | <a href="http://www.vim.org/scripts/script.php?script_id=4059">vim.org</a></li>
         </ul>
     </div>
 

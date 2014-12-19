@@ -17,7 +17,9 @@ div#content {
     width: 50%;
     font-size: medium;
 }
-div#content p > code {
+div#content p > code,
+div#content li > code
+{
     padding-top: 0.2em;
     padding-bottom: 0.2em;
     background: #b4d5e4;

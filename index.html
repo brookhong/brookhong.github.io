@@ -6,8 +6,7 @@ title: Brook Hong
 <div id="content">
 
     <div class='section profile'>
-        Hi, this is Brook, currently a Software Developer in Adobe(<a href="http://news.yahoo.com/us-software-firm-adobe-shut-china-research-branch-093650879.html">will leave the company at Dec 19th</a>).
-        <p>I mostly program with C/C++, kindly take a look at <a href="/2014/04/28/keycast-on-windows.html">KeyCastOW</a>, <a href="https://github.com/brookhong/kv">kv</a>, <a href="https://github.com/brookhong/tts">tts</a> and <a href="https://github.com/brookhong/wikenotes">wikenotes</a>.  Also happily involved in VIM plugin development with python, like <a href="https://github.com/brookhong/DBGPavim">DBGPavim</a> and <a href="https://github.com/brookhong/cloudboard.vim">cloudboard.vim</a>.</p>
+        {% markdown about.md %}
     </div>
 
     <div class='section posts'>
@@ -15,14 +14,6 @@ title: Brook Hong
             {% for post in site.categories.en %}
             <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
             {% endfor %}
-        </ul>
-    </div>
-
-    <div class='section projects'>
-        <ul class="projects">
-            <li>A command line dictionary tool &raquo; <a href="https://github.com/brookhong/kv">source</a> | <a href="/assets/downloads/kv.zip">download Windows Binary</a></li>
-            <li>A command line tool to read text with Microsoft Speech API (SAPI) &raquo; <a href="https://github.com/brookhong/tts">source</a> | <a href="/assets/downloads/tts.zip">download Windows Binary</a></li>
-            <li>A plugin to enable php/python debug in VIM with XDebug &raquo; <a href="https://github.com/brookhong/DBGPavim">source</a> | <a href="http://www.vim.org/scripts/script.php?script_id=4059">Release on vim.org</a></li>
         </ul>
     </div>
 
