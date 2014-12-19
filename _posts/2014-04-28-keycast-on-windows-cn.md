@@ -19,6 +19,11 @@ Windows按键显示软件，显示你的按键操作，可用于录制教学视�
 
 ## 更新历史
 
+### 2014-12-19 2.0.0.8
+* [组合键的括号和连接符可自定义](https://github.com/brookhong/brookhong.github.io/issues/12), 默认是`<->`, 设置成`[+]` 就会把 `<Alt - Tab>` 显示成 `[Alt + Tab]`。
+* [linger time有时会出错](https://github.com/brookhong/brookhong.github.io/issues/13)。
+* [可设置在屏幕上显示的最大行数](https://github.com/brookhong/brookhong.github.io/issues/13)，默认是10。
+
 ### 2014-12-04 2.0.0.7
 * [支持鼠标动作捕捉](https://github.com/brookhong/brookhong.github.io/issues/12)，默认是打开的，从设置里可以关闭。
 

@@ -18,6 +18,11 @@ keystroke visualizer for Windows,  lets you easily display your keystrokes while
 
 ## History
 
+### 2014-12-19 2.0.0.8
+* [setting of brackets/hyphen for combination keys](https://github.com/brookhong/brookhong.github.io/issues/12), `<->` by default, `[+]` to show `<Alt - Tab>` like `[Alt + Tab]`
+* [fix bug of linger time](https://github.com/brookhong/brookhong.github.io/issues/13)
+* [setting of maximum lines on display](https://github.com/brookhong/brookhong.github.io/issues/13), 10 by default.
+
 ### 2014-12-04 2.0.0.7
 * [support mouse actions capturing](https://github.com/brookhong/brookhong.github.io/issues/12), turned on by default, can be turned off from settings.
 
