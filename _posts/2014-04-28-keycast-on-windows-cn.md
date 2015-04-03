@@ -19,6 +19,10 @@ Windows按键显示软件，显示你的按键操作，可用于录制教学视�
 
 ## 更新历史
 
+### 2015-04-04 2.0.0.9
+* [改善鼠标动作显示](https://github.com/brookhong/brookhong.github.io/issues/14)
+![keycastow 2.0.0.9](/assets/images/keycastow2.0.0.9.png)
+
 ### 2014-12-19 2.0.0.8
 * [组合键的括号和连接符可自定义](https://github.com/brookhong/brookhong.github.io/issues/12), 默认是`<->`, 设置成`[+]` 就会把 `<Alt - Tab>` 显示成 `[Alt + Tab]`。
 * [linger time有时会出错](https://github.com/brookhong/brookhong.github.io/issues/13)。
