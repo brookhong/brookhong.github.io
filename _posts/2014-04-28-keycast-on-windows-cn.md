@@ -19,6 +19,11 @@ Windows按键显示软件，显示你的按键操作，可用于录制教学视�
 
 ## 更新历史
 
+### 2015-04-12 2.0.1.0
+* [长按时重复设置: Keyboard Auto Repeat](https://github.com/brookhong/brookhong.github.io/issues/9)，默认行为是打开的，比如按住a键不放，会不断触发a键事件，如果关上的话，按住a不放，只会触发一个a，只有当放开之后再按下a，才会出现下一个a。
+* [行间距为负数时程序会崩溃](https://github.com/brookhong/brookhong.github.io/issues/15)
+* [增加合并鼠标键按下放开的设置: Quick Mouse Button Up/Down as Click](https://github.com/brookhong/brookhong.github.io/issues/15)，默认时按下鼠标键会有一个ButtonDown，再放开时会有一个ButtonUp。打开该设置时，如果鼠标按下放开间隙短的话，会直接显示为Click。
+
 ### 2015-04-04 2.0.0.9
 * [改善鼠标动作显示](https://github.com/brookhong/brookhong.github.io/issues/14)
 ![keycastow 2.0.0.9](/assets/images/keycastow2.0.0.9.png)

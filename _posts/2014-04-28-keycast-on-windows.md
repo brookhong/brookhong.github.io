@@ -18,6 +18,11 @@ keystroke visualizer for Windows,  lets you easily display your keystrokes while
 
 ## History
 
+### 2015-04-12 2.0.1.0
+* [new setting: Keyboard Auto Repeat](https://github.com/brookhong/brookhong.github.io/issues/9), turned on by default, for example, if user holds down `a`, serials of `a` is generated. If the setting is unchecked, only one `a` is generated, until user releases the key and presses it again.
+* [fixed a bug when label spacing is negative](https://github.com/brookhong/brookhong.github.io/issues/15)
+* [new setting: Quick Mouse Button Up/Down as Click](https://github.com/brookhong/brookhong.github.io/issues/15), turned off by default, there are a ButtonUp and a ButtonDown for a mouse click in this case. When it's on, if the ButtonUp is closed enough with ButtonDown, it will be displayed as a Click.
+
 ### 2015-04-04 2.0.0.9
 * [better capturing on mouse action](https://github.com/brookhong/brookhong.github.io/issues/14)
 ![keycastow 2.0.0.9](/assets/images/keycastow2.0.0.9.png)
