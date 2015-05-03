@@ -33,15 +33,4 @@ if(isHomePage()) {
         ss = $.cookie('section');
     }
     $('#menu a[section=' + ss + ']').trigger('click');
-
-    var qrcode = new QRCode(document.getElementById("qrcode"), {
-        width : 300,
-        height : 300
-    });
-    $("#text").on("blur", function () {
-        var elText = document.getElementById("text");
-        if (elText.value) {
-            qrcode.makeCode(elText.value);
-        }
-    });
 }

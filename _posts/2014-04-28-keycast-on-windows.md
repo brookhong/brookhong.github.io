@@ -18,6 +18,12 @@ keystroke visualizer for Windows,  lets you easily display your keystrokes while
 
 ## History
 
+### 2015-05-03 2.0.2.0
+* hold down modifier key to keep it on display, rather than repeat it
+* alignment setting, right alignment by default, so that the labels on dispaly is moving left when inline
+* a visual way to set position where the labels start
+* [settings saved in ini file instead of registery](https://github.com/brookhong/brookhong.github.io/issues/16)
+
 ### 2015-04-12 2.0.1.0
 * [new setting: Keyboard Auto Repeat](https://github.com/brookhong/brookhong.github.io/issues/9), turned on by default, for example, if user holds down `a`, serials of `a` is generated. If the setting is unchecked, only one `a` is generated, until user releases the key and presses it again.
 * [fixed a bug when label spacing is negative](https://github.com/brookhong/brookhong.github.io/issues/15)

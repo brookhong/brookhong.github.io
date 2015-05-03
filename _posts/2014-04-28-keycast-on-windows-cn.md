@@ -19,6 +19,12 @@ Windows按键显示软件，显示你的按键操作，可用于录制教学视�
 
 ## 更新历史
 
+### 2015-05-03 2.0.2.0
+* 按住功能辅助键时，保持在屏幕上，而不是重复显示
+* 支持左/右对齐设置，默认是右对齐，这样当需要在一行显示时，向左移动。
+* 更直观的可视化定位方式，来设置起始位置
+* [设置不再保存在注册表里，而保存在当前目录下的ini文件里](https://github.com/brookhong/brookhong.github.io/issues/16)
+
 ### 2015-04-12 2.0.1.0
 * [长按时重复设置: Keyboard Auto Repeat](https://github.com/brookhong/brookhong.github.io/issues/9)，默认行为是打开的，比如按住a键不放，会不断触发a键事件，如果关上的话，按住a不放，只会触发一个a，只有当放开之后再按下a，才会出现下一个a。
 * [行间距为负数时程序会崩溃](https://github.com/brookhong/brookhong.github.io/issues/15)
