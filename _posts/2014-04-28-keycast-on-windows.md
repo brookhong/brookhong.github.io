@@ -18,6 +18,10 @@ keystroke visualizer for Windows,  lets you easily display your keystrokes while
 
 ## History
 
+### 2015-05-03 2.0.2.3
+* [remove the 3rd char of Combination Chars to disable brackets](https://github.com/brookhong/brookhong.github.io/issues/21)
+* [detect MouseWheel Up/Down](https://github.com/brookhong/brookhong.github.io/issues/24)
+
 ### 2015-05-03 2.0.2.0
 * hold down modifier key to keep it on display, rather than repeat it
 * alignment setting, right alignment by default, so that the labels on dispaly is moving left when inline

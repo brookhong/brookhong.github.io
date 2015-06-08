@@ -19,6 +19,10 @@ Windows按键显示软件，显示你的按键操作，可用于录制教学视�
 
 ## 更新历史
 
+### 2015-05-03 2.0.2.3
+* [支持不括号功能键，去掉Combination Chars的第三个字符即可](https://github.com/brookhong/brookhong.github.io/issues/21)
+* [检测鼠标滚轮方向：上或下](https://github.com/brookhong/brookhong.github.io/issues/24)
+
 ### 2015-05-03 2.0.2.0
 * 按住功能辅助键时，保持在屏幕上，而不是重复显示
 * 支持左/右对齐设置，默认是右对齐，这样当需要在一行显示时，向左移动。
