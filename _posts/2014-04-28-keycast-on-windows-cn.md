@@ -19,7 +19,7 @@ Windows按键显示软件，显示你的按键操作，可用于录制教学视�
 
 ## 更新历史
 
-### 2015-05-03 2.0.2.3
+### 2015-06-08 2.0.2.3
 * [支持不括号功能键，去掉Combination Chars的第三个字符即可](https://github.com/brookhong/brookhong.github.io/issues/21)
 * [检测鼠标滚轮方向：上或下](https://github.com/brookhong/brookhong.github.io/issues/24)
 
