@@ -23,14 +23,15 @@ div#content li > code
     padding-top: 0.2em;
     padding-bottom: 0.2em;
     background: #b4d5e4;
+    border: 1px solid #63889A;
     border-radius: 2px;
 }
 div#content pre {
     padding: 12px;
-    background: #b4d5e4;
-    border-radius: 8px;
-    border: 1px solid #a8cddf;
-    box-shadow: 3px 3px 3px #deedf3;
+    background: #eee;
+    border-radius: 2px;
+    border: 1px solid #bbb;
+    border-left-width: 4px;
     word-wrap: break-word;
 }
 div#content .section {
