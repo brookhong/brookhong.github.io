@@ -9,11 +9,8 @@ category: en
 
 Put vim snippet(which depends on python) below in your vim configuration file
 
-    if !has("python")
-        finish
-    endif
-
-    python << EOF
+    if has("python")
+        python << EOF
     import vim
     import json
     def FormatJSON(fmtlStart, fmtlEnd):
@@ -24,8 +21,8 @@ Put vim snippet(which depends on python) below in your vim configuration file
         vim.current.buffer[fmtlStart:fmtlEnd] = prettyJson.split('\n')
     EOF
 
-    com! -range -bar FmtJSON :python FormatJSON(<line1>, <line2>)
-
+        com! -range -bar FmtJSON :python FormatJSON(<line1>, <line2>)
+    endif
 
 Now, open a file containing json string, go to the line where the json string starts.
 
