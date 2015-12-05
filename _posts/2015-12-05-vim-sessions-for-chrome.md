@@ -46,7 +46,7 @@ You can create multiple sessions with different names in command mode. Press `:`
 
 Surfingkeys will create a session named `works` for you, to open the session with command input as:
 
-    openSession  works
+    openSession works
 
 To list all your saved sessions:
 
@@ -54,4 +54,4 @@ To list all your saved sessions:
 
 To delete a session:
 
-    deleteSession  works
+    deleteSession works
