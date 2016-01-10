@@ -13,7 +13,7 @@ Surfingkeys是这样解决这个问题的。
 
 `se`打开Surfingkeys的设置，在最后插入下面这段设置代码，保存一下。
 
-    mapkey('zz', '收起', 'clickOn("a[action-type=feed_list_media_toSmall]")', 0, /weibo.com/i);
+    mapkey('zz', '收起', "clickOn($('a').regex(/tosmall/i, $.fn.attr, ['action-type']))", 0, /weibo.com/i);
     mapkey('q', '点开微博上的图片/视频', 'Hints.create("div.media_box img", Hints.dispatchMouseClick)', 0, /weibo.com/i);
 
 然后，打开微博，`q`就可以选择打开你想看的图片或者视频了，看完了`zz`一下收起。
