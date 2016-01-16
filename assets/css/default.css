@@ -1,7 +1,7 @@
 div#menu {
-    margin: 8em;
     vertical-align: top;
-    width: 12%;
+    position: fixed;
+    top: 80px;
 }
 
 div#menu li {
@@ -9,13 +9,27 @@ div#menu li {
     font-size: 120%
 }
 
+div#toc {
+    position: fixed;
+    right: 10px;
+    top: 80px;
+    width: 20%;
+}
+div#toc li {
+    font-size: 10pt;
+}
+
 div.footer, div.title {
     text-align: center;
 }
 
 div#content {
-    width: 50%;
+    width: 80%;
+    padding-left: 18%;
     font-size: medium;
+}
+div#content img {
+    width: 60vw;
 }
 div#content p > code,
 div#content li > code
@@ -39,17 +53,16 @@ div#content .section {
 }
 
 div#content h2 {
-    margin-top: 3em;
+    margin-top: 1em;
 }
 
 div#content, div#menu {
-    margin-top: 3em;
-    display: inline-block;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
-    font: 125%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif
+    font: 125%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -59,4 +72,14 @@ a {
 a:hover {
     background-color: #55f;
     color: #fff;
+}
+@media only screen and (max-width: 767px) {
+    div#toc, div#menu {
+        display: none;
+    }
+    div#content {
+        width: 100%;
+        padding-left: 0;
+    }
+    width: 80%;
 }

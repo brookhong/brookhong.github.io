@@ -54,23 +54,158 @@ Most features from vimium or cVim are implemented by adding a `mapkey` call in s
 
 Besides that, Surfingkeys provides some of my favorite features.
 
-## Search selected with
+### Search selected with
 
 I like this feature from when I was using Firefox. For both Firefox and Chrome, extensions are used through a context menu.
 Surfingkeys does this through key mappings. By default, when you press `sg` in normal mode, it will search selected text with google, if there is none selected, it will search text from system clipboard with google. In visual mode, it will search selected text with google.
 
 The `g` in `sg` is a search alias for google, there are some other built-in search aliases -- like `w` for bing. So press `sw` to search selected with bing. Refer to [Add search alias to omnibar](https://github.com/brookhong/Surfingkeys#add-search-alias-to-omnibar) to add your own search alias, useful for internal company search engines.
 
-## The vim-like marks
+### The vim-like marks
 
 You can create vim-like marks by pressing `m`, followed by a word character(0-9, A-Z, a-z), used as a marker. For example, if you press `ma` on this page, you'll create a mark named `a` which points to this page. Then pressing `'a` anywhere, you'll jump to this page.
 
 Essentially, it's a faster bookmark.
 
-## A better bookmark finder
+### A better bookmark finder
 
 You can find what you want by typing something, also can navigate into a bookmark folder, and search in it.
 
-## A large cursor in visual mode
+### A large cursor in visual mode
 
 The cursor is made large for visibility, as sometimes it's not easy for human to locate a normal cursor on a web page.
+
+
+## Shortcuts reference
+
+The default shortcuts are created per the rules:
+
+* easy for one hand(left)
+* respect famous binding from VIM
+* first letter of words
+
+### sessions
+
+        ZQ       Quit
+        ZZ       Save session and quit
+        ZR       Restore last session
+
+### tabs
+
+        T        Choose a tab
+        E        Go one tab left
+        R        Go one tab right
+        B        Go one tab history back
+        F        Go one tab history forward
+        a-p      pin/unpin current tab
+        x        Close current tab
+        X        Restore closed tab
+        yt       Duplicate current tab
+        on       Open Chrome newtab
+
+### scroll
+
+        e        Scroll a page up
+        d        Scroll a page down
+        j        Scroll down
+        k        Scroll up
+        h        Scroll left
+        l        Scroll right
+        G        Scroll to the bottom of the page
+        gg       Scroll to the top of the page
+        cs       Change scroll target
+
+### mouse
+
+        gf       Open a link in non-active new tab
+        f        Open a link
+        af       Open a link in new tab
+        a-f      Open multiple links in a new tab
+        q        Click on an Image or a button
+        i        Go to edit box
+
+### history
+
+        S        Go back in history
+        D        Go forward in history
+
+### current page
+
+        r        Reload the page
+        gu       Go up one path in the URL
+        gU       Go to root of current URL hierarchy
+        /        Find in current page
+        n        Next found text
+        N        Previous found text
+        p        Paste html on current page.
+        [[       Click on the previous link on current page
+        ]]       Click on the next link on current page
+        ;q       Insert jquery library on current page
+
+### clipboard
+
+        ys       Copy current page's source
+        yf       Copy current page's URL
+        yl       Copy current page's title
+        cc       Open selected link or link from clipboard
+
+### omnibar
+
+        t        Open an URLs
+        b        Open a bookmark
+        oh       Open URL from history
+        om       Open URL from vim-like marks
+        ob       Open Search with alias b
+        og       Open Search with alias g
+        ow       Open Search with alias w
+        :        Open commands
+
+### visual mode
+
+        v        Toggle visual mode
+        *        Find selected text in current page
+
+### vim-like marks
+
+        m        Add current URL to vim-like marks
+        '        Jump to vim-like mark
+
+### frames
+
+        w        Switch frames
+
+### settings
+
+        se       Edit Settings
+        sr       Reset Settings
+
+### search selected with
+
+        sg       Search selected with google
+        sog      Search selected only in this site with google
+        sob      Search selected only in this site with baidu
+        sow      Search selected only in this site with bing
+        sos      Search selected only in this site with stackoverflow
+        soh      Search selected only in this site with github
+        sb       Search selected with baidu
+        sw       Search selected with bing
+        ss       Search selected with stackoverflow
+        sh       Search selected with github
+
+### chrome urls
+
+        gb       Open Chrome Bookmarks
+        gj       Open Chrome Bookmarks
+        gc       Open Chrome Cache
+        gd       Open Chrome Downloads
+        gh       Open Chrome History
+        gk       Open Chrome Cookies
+        ge       Open Chrome Extensions
+        gn       Open Chrome net-internals
+        gs       View page source
+        si       Open Chrome Inpect
+
+### usages
+
+        c-i      Show usage
+        u        Show usage

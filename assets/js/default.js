@@ -33,4 +33,15 @@ if(isHomePage()) {
         ss = $.cookie('section');
     }
     $('#menu a[section=' + ss + ']').trigger('click');
+} else {
+    $('h2,h3').each(function() {
+        var h2 = this;
+        if ($(h2).is(':visible')) {
+            $("<li><a href='javascript:void(0);'>" + $(this).text() + "</a></li>").appendTo('#toc ul').click(function() {
+                $('html, body').animate({
+                    scrollTop: $(h2).offset().top
+                }, 500);
+            });
+        }
+    });
 }

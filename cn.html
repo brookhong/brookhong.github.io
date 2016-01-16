@@ -3,17 +3,14 @@ layout: cn
 title: Brook Hong
 ---
 
-<div id="content">
+<div class='section profile'>
+    {% include about_cn.html %}
+</div>
 
-    <div class='section profile'>
-        {% include about_cn.html %}
-    </div>
-
-    <div class='section posts'>
-        <ul class="posts">
-            {% for post in site.categories.cn %}
-            <li><span>{{ post.date | date: "%Y-%m-%d" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-            {% endfor %}
-        </ul>
-    </div>
+<div class='section posts'>
+    <ul class="posts">
+        {% for post in site.categories.cn %}
+        <li><span>{{ post.date | date: "%Y-%m-%d" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
 </div>
