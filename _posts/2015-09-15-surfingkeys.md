@@ -97,11 +97,15 @@ The default shortcuts are created per the rules:
         R        Go one tab right
         B        Go one tab history back
         F        Go one tab history forward
-        a-p      pin/unpin current tab
+        alt-p    pin/unpin current tab
         x        Close current tab
         X        Restore closed tab
         yt       Duplicate current tab
         on       Open Chrome newtab
+        g0       Go to the first tab
+        g$       Go to the last tab
+        <<       Move current tab to left
+        >>       Move current tab to right
 
 ### scroll
 
@@ -113,6 +117,8 @@ The default shortcuts are created per the rules:
         l        Scroll right
         G        Scroll to the bottom of the page
         gg       Scroll to the top of the page
+        zH       Scroll all the way to the left
+        zL       Scroll all the way to the right
         cs       Change scroll target
 
 ### mouse
@@ -120,7 +126,7 @@ The default shortcuts are created per the rules:
         gf       Open a link in non-active new tab
         f        Open a link
         af       Open a link in new tab
-        a-f      Open multiple links in a new tab
+        alt-f    Open multiple links in a new tab
         q        Click on an Image or a button
         i        Go to edit box
 
@@ -140,24 +146,30 @@ The default shortcuts are created per the rules:
         p        Paste html on current page.
         [[       Click on the previous link on current page
         ]]       Click on the next link on current page
+        ;m       Mouse out last element
+        ;j       Close downloads shelf
+        ;p       Paste html on current page
         ;q       Insert jquery library on current page
 
 ### clipboard
 
         ys       Copy current page's source
-        yf       Copy current page's URL
+        yy       Copy current page's URL
         yl       Copy current page's title
+        yf       Copy a link URL to the clipboard
         cc       Open selected link or link from clipboard
 
 ### omnibar
 
         t        Open an URLs
         b        Open a bookmark
+        ab       Bookmark current page to selected folder
         oh       Open URL from history
         om       Open URL from vim-like marks
         ob       Open Search with alias b
         og       Open Search with alias g
         ow       Open Search with alias w
+        ox       Open recently closed
         :        Open commands
 
 ### visual mode
@@ -207,5 +219,40 @@ The default shortcuts are created per the rules:
 
 ### usages
 
-        c-i      Show usage
+        ctrl-i   Show usage
         u        Show usage
+
+### proxy
+
+        spa      set proxy mode `always`
+        spb      set proxy mode `byhost`
+        spd      set proxy mode `direct`
+        sps      set proxy mode `system`
+        spi      show proxy info
+        cp       Toggle proxy for current site
+
+### Settings with key mappings like vimium
+
+    map('u', 'e');
+    mapkey('p', "Open the clipboard's URL in the current tab", function() {
+        Normal.getContentFromClipboard(function(response) {
+            window.location.href = response.data;
+        });
+    });
+    map('P', 'cc');
+    map('gi', 'i');
+    map('F', 'af');
+    map('gf', 'w');
+    map('`', '\'');
+    // save default key `t` to temp key `>_t`
+    map('>_t', 't');
+    // create a new key `t` for default key `on`
+    map('t', 'on');
+    // create a new key `o` for saved temp key `>_t`
+    map('o', '>_t');
+    map('H', 'S');
+    map('L', 'D');
+    map('gt', 'R');
+    map('gT', 'E');
+    map('K', 'R');
+    map('J', 'E');
