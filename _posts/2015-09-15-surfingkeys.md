@@ -36,8 +36,8 @@ These things make it hard, for example, to map a key to a javascript function I'
 Javascript is good enough for users to create their own mappings.  I don't need to create another lame scripting language, which is painful for both me and the users.
 So I created an extension -- [Surfingkeys](https://github.com/brookhong/Surfingkeys) which works like this:
 
-    mapkey('c-y', 'Show me the money', function() {
-        alert('a well-known phrase uttered by characters in the 1996 film Jerry Maguire');
+    mapkey('<Ctrl-y>', 'Show me the money', function() {
+        Normal.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
     });
 
 The first parameter is the keystroke, the second is a help message that describes the action, which will also be displayed in help popover.
@@ -84,152 +84,204 @@ The default shortcuts are created per the rules:
 * respect famous binding from VIM
 * first letter of words
 
-### sessions
+### Help
 
-        ZQ       Quit
-        ZZ       Save session and quit
-        ZR       Restore last session
+        ?                     Show usage
+        <Ctrl-i>              Show usage
+        <Ctrl-1>              show pressed key
+        u                     Show usage
 
-### tabs
+### Mouse Click
 
-        T        Choose a tab
-        E        Go one tab left
-        R        Go one tab right
-        B        Go one tab history back
-        F        Go one tab history forward
-        alt-p    pin/unpin current tab
-        x        Close current tab
-        X        Restore closed tab
-        yt       Duplicate current tab
-        on       Open Chrome newtab
-        g0       Go to the first tab
-        g$       Go to the last tab
-        <<       Move current tab to left
-        >>       Move current tab to right
+        gf                    Open a link in non-active new tab
+        <Alt-f>               Open multiple links in a new tab
+        f                     Open a link
+        af                    Open a link in new tab
+        i                     Go to edit box
+        I                     Go to edit box
+        q                     Click on an Image or a button
+        [[                    Click on the previous link on current page
+        ]]                    Click on the next link on current page
+        ;m                    mouse out last element
 
-### scroll
+### Scroll Page / Element
 
-        e        Scroll a page up
-        d        Scroll a page down
-        j        Scroll down
-        k        Scroll up
-        h        Scroll left
-        l        Scroll right
-        G        Scroll to the bottom of the page
-        gg       Scroll to the top of the page
-        zH       Scroll all the way to the left
-        zL       Scroll all the way to the right
-        cs       Change scroll target
+        cs                    Change scroll target
+        gg                    Scroll to the top of the page
+        e                     Scroll a page up
+        d                     Scroll a page down
+        j                     Scroll down
+        k                     Scroll up
+        h                     Scroll left
+        l                     Scroll right
+        G                     Scroll to the bottom of the page
+        0                     Scroll all the way to the left
+        $                     Scroll all the way to the right
+        w                     Switch frames
 
-### mouse
+### Tabs
 
-        gf       Open a link in non-active new tab
-        f        Open a link
-        af       Open a link in new tab
-        alt-f    Open multiple links in a new tab
-        q        Click on an Image or a button
-        i        Go to edit box
+        g0                    Go to the first tab
+        g$                    Go to the last tab
+        T                     Choose a tab
+        <Alt-p>               pin/unpin current tab
+        <Alt-m>               mute/unmute current tab
+        <<                    Move current tab to left
+        yt                    Duplicate current tab
+        E                     Go one tab left
+        R                     Go one tab right
+        on                    Open Chrome newtab
+        x                     Close current tab
+        X                     Restore closed tab
+        >>                    Move current tab to right
 
-### history
+### Page Navigation
 
-        S        Go back in history
-        D        Go forward in history
+        su                    Edit current URL with vim editor
+        gu                    Go up one path in the URL
+        gU                    Go to root of current URL hierarchy
+        B                     Go one tab history back
+        F                     Go one tab history forward
+        S                     Go back in history
+        D                     Go forward in history
+        r                     Reload the page
 
-### current page
+### Sessions
 
-        r        Reload the page
-        gu       Go up one path in the URL
-        gU       Go to root of current URL hierarchy
-        /        Find in current page
-        n        Next found text
-        N        Previous found text
-        p        Paste html on current page.
-        [[       Click on the previous link on current page
-        ]]       Click on the next link on current page
-        ;m       Mouse out last element
-        ;j       Close downloads shelf
-        ;p       Paste html on current page
-        ;q       Insert jquery library on current page
+        ZQ                    quit chrome
+        ZZ                    Save session and quit
+        ZR                    Restore last session
 
-### clipboard
+### Search selected with
 
-        ys       Copy current page's source
-        yy       Copy current page's URL
-        yl       Copy current page's title
-        yf       Copy a link URL to the clipboard
-        cc       Open selected link or link from clipboard
+        sg                    Search selected with google
+        sog                   Search selected only in this site with google
+        soG                   Search selected only in this site with google interactively
+        sob                   Search selected only in this site with baidu
+        soB                   Search selected only in this site with baidu interactively
+        sow                   Search selected only in this site with bing
+        soW                   Search selected only in this site with bing interactively
+        sos                   Search selected only in this site with stackoverflow
+        soS                   Search selected only in this site with stackoverflow interactively
+        soh                   Search selected only in this site with github
+        soH                   Search selected only in this site with github interactively
+        sG                    Search selected with google interactively
+        sb                    Search selected with baidu
+        sB                    Search selected with baidu interactively
+        sw                    Search selected with bing
+        sW                    Search selected with bing interactively
+        ss                    Search selected with stackoverflow
+        sS                    Search selected with stackoverflow interactively
+        sh                    Search selected with github
+        sH                    Search selected with github interactively
 
-### omnibar
+### Clipboard
 
-        t        Open an URLs
-        b        Open a bookmark
-        ab       Bookmark current page to selected folder
-        oh       Open URL from history
-        om       Open URL from vim-like marks
-        ob       Open Search with alias b
-        og       Open Search with alias g
-        ow       Open Search with alias w
-        ox       Open recently closed
-        :        Open commands
+        cc                    Open selected link or link from clipboard
+        ya                    Copy a link URL to the clipboard
+        ys                    Copy current page's source
+        yj                    Copy current settings
+        yd                    Copy current downloading URL
+        yy                    Copy current page's URL
+        yl                    Copy current page's title
+        yf                    Copy form data on current page
+        ;p                    Paste html on current page
 
-### visual mode
+### Omnibar
 
-        v        Toggle visual mode
-        *        Find selected text in current page
+        ab                    Bookmark current page to selected folder
+        t                     Open an URLs
+        ox                    Open recently closed URL
+        oh                    Open URL from history
+        om                    Open URL from vim-like marks
+        ob                    Open Search with alias b
+        og                    Open Search with alias g
+        ow                    Open Search with alias w
+        b                     Open a bookmark
+        :                     Open commands
+
+### Visual Mode
+
+        v                     Toggle visual mode
+        /                     Find in current page
+        *                     Find selected text in current page
+        n                     Next found text
+        N                     Previous found text
+        l                     forward character
+        h                     backward character
+        j                     forward line
+        k                     backward line
+        w                     forward word
+        e                     forward word
+        b                     backward word
+        )                     forward sentence
+        (                     backward sentence
+        }                     forward paragraph
+        {                     backward paragraph
+        0                     backward lineboundary
+        $                     forward lineboundary
+        G                     forward documentboundary
+        gg                    backward documentboundary
+        y                     Copy selected text
+        *                     Search word under the cursor
+        <Enter>               Click on node under cursor.
+        sg                    Search selected with google
+        sog                   Search selected only in this site with google
+        soG                   Search selected only in this site with google interactively
+        sob                   Search selected only in this site with baidu
+        soB                   Search selected only in this site with baidu interactively
+        sow                   Search selected only in this site with bing
+        soW                   Search selected only in this site with bing interactively
+        sos                   Search selected only in this site with stackoverflow
+        soS                   Search selected only in this site with stackoverflow interactively
+        soh                   Search selected only in this site with github
+        soH                   Search selected only in this site with github interactively
+        sG                    Search selected with google interactively
+        sb                    Search selected with baidu
+        sB                    Search selected with baidu interactively
+        sw                    Search selected with bing
+        sW                    Search selected with bing interactively
+        ss                    Search selected with stackoverflow
+        sS                    Search selected with stackoverflow interactively
+        sh                    Search selected with github
+        sH                    Search selected with github interactively
 
 ### vim-like marks
 
-        m        Add current URL to vim-like marks
-        '        Jump to vim-like mark
+        m                     Add current URL to vim-like marks
+        '                     Jump to vim-like mark
 
-### frames
+### Settings
 
-        w        Switch frames
+        se                    Edit Settings
+        sr                    Reset Settings
 
-### settings
+### Chrome URLs
 
-        se       Edit Settings
-        sr       Reset Settings
+        si                    Open Chrome Inpect
+        gb                    Open Chrome Bookmarks
+        gc                    Open Chrome Cache
+        gd                    Open Chrome Downloads
+        gh                    Open Chrome History
+        gk                    Open Chrome Cookies
+        ge                    Open Chrome Extensions
+        gn                    Open Chrome net-internals
+        gs                    View page source
+        ;j                    Close Downloads Shelf
 
-### search selected with
+### Proxy
 
-        sg       Search selected with google
-        sog      Search selected only in this site with google
-        sob      Search selected only in this site with baidu
-        sow      Search selected only in this site with bing
-        sos      Search selected only in this site with stackoverflow
-        soh      Search selected only in this site with github
-        sb       Search selected with baidu
-        sw       Search selected with bing
-        ss       Search selected with stackoverflow
-        sh       Search selected with github
+        cp                    Toggle proxy for current site
+        spa                   set proxy mode `always`
+        spb                   set proxy mode `byhost`
+        spd                   set proxy mode `direct`
+        sps                   set proxy mode `system`
+        spi                   show proxy info
+        sfr                   show failed web requests of current page
 
-### chrome urls
+### Misc
 
-        gb       Open Chrome Bookmarks
-        gj       Open Chrome Bookmarks
-        gc       Open Chrome Cache
-        gd       Open Chrome Downloads
-        gh       Open Chrome History
-        gk       Open Chrome Cookies
-        ge       Open Chrome Extensions
-        gn       Open Chrome net-internals
-        gs       View page source
-        si       Open Chrome Inpect
-
-### usages
-
-        ctrl-i   Show usage
-        u        Show usage
-
-### proxy
-
-        spa      set proxy mode `always`
-        spb      set proxy mode `byhost`
-        spd      set proxy mode `direct`
-        sps      set proxy mode `system`
-        spi      show proxy info
-        cp       Toggle proxy for current site
+        ;q                    Insert jquery library on current page
 
 ### Settings with key mappings like vimium
 
