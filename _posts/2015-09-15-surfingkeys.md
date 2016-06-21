@@ -75,6 +75,39 @@ You can find what you want by typing something, also can navigate into a bookmar
 
 The cursor is made large for visibility, as sometimes it's not easy for human to locate a normal cursor on a web page.
 
+## VIM editor
+
+Thanks ACE for the vim editor, Surfingkeys integrates ACE for the vim editor. The vim editor is used:
+
+* to edit any input on html page
+* to edit URL to open in new tab
+* to edit settings
+
+### Edit any input on html page
+
+In normal mode, press capital `I`, then use a hint letter to pick up a input box. A vim editor is opened for you to edit text. The vim editor is opened in lightly different way for `input` and `textarea`.
+
+For `input` element, the vim editor has only one line, you use vim-bindings keys to edit your text, then press `Enter` or `:w` to write your text back to the input element.
+
+For `textarea` element, the vim editor is opened in bigger size, after you complete your edit, then press `Ctrl-Enter` or `:w` to write your text back to the textarea element.
+
+`Esc` or `:q` to quit vim editor without writing text back.
+
+`Tab` completion works with all words on current page, `Space` to choose a match from popup.
+
+If you enter insert mode with `i` or mouse click, you will edit your input in normal way. You could also open vim editor at that time by pressing `Ctrl-i`.
+
+Remember that in insert mode, press `Ctrl-i` to open vim editor.
+
+### Edit URL to open in new tab
+
+`su` to open vim editor to edit current URL, then `Enter` or `:w` to open the input URL, which works just like address bar with vim-binding keys.
+
+`Tab` completion works with all URLs from bookmark/history, `Space` to choose a match from popup.
+
+### Edit settings
+
+`se` to open settings editor, `:w` to save settings.
 
 ## Shortcuts reference
 
@@ -98,7 +131,7 @@ The default shortcuts are created per the rules:
         f                     Open a link
         af                    Open a link in new tab
         i                     Go to edit box
-        I                     Go to edit box
+        I                     Go to edit box with vim editor
         q                     Click on an Image or a button
         [[                    Click on the previous link on current page
         ]]                    Click on the next link on current page
@@ -197,6 +230,7 @@ The default shortcuts are created per the rules:
         ob                    Open Search with alias b
         og                    Open Search with alias g
         ow                    Open Search with alias w
+        H                     Open opened URL in current tab
         b                     Open a bookmark
         :                     Open commands
 
@@ -282,6 +316,10 @@ The default shortcuts are created per the rules:
 ### Misc
 
         ;q                    Insert jquery library on current page
+
+### Insert Mode
+
+        <Ctrl-i>              Open vim editor for current input
 
 ### Settings with key mappings like vimium
 
