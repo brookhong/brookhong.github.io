@@ -18,6 +18,15 @@ keystroke visualizer for Windows,  lets you easily display your keystrokes while
 
 ## History
 
+### 2016-08-10 2.0.2.5
+* [Add deferred label to get rid of mousedown before click] (https://github.com/brookhong/brookhong.github.io/issues/19)
+* [Keep display on mouse down is holding] (https://github.com/brookhong/brookhong.github.io/issues/27)
+* [Key combinations overwrite previous display] (https://github.com/brookhong/brookhong.github.io/issues/32)
+* [Crashes on maximumLines set to 0] (https://github.com/brookhong/brookhong.github.io/issues/38)
+* [Can't move display to the bottom of screen because taskbar is placed on top of the desktopscreen] (https://github.com/brookhong/brookhong.github.io/issues/43)
+* [Draggable label that can be turned on/off in settings] (https://github.com/brookhong/brookhong.github.io/issues/44)
+* [Alignment as left can not work after restart] (https://github.com/brookhong/brookhong.github.io/issues/45)
+
 ### 2015-06-08 2.0.2.3
 * [remove the 3rd char of Combination Chars to disable brackets](https://github.com/brookhong/brookhong.github.io/issues/21)
 * [detect MouseWheel Up/Down](https://github.com/brookhong/brookhong.github.io/issues/24)
