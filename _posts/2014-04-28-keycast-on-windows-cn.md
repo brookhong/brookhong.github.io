@@ -20,13 +20,13 @@ Windows按键显示软件，显示你的按键操作，可用于录制教学视�
 ## 更新历史
 
 ### 2016-08-10 2.0.2.5
-* [消除单击操作之前的MouseDown] (https://github.com/brookhong/brookhong.github.io/issues/19)
-* [按住鼠标时保持显示] (https://github.com/brookhong/brookhong.github.io/issues/27)
-* [组合键往上移动] (https://github.com/brookhong/brookhong.github.io/issues/32)
-* [maximumLines为0时crash] (https://github.com/brookhong/brookhong.github.io/issues/38)
-* [任务栏在上方时设置起始位置有问题] (https://github.com/brookhong/brookhong.github.io/issues/43)
-* [添加设置配置显示可拖拽] (https://github.com/brookhong/brookhong.github.io/issues/44)
-* [左对齐时重启后有问题] (https://github.com/brookhong/brookhong.github.io/issues/45)
+* [消除单击操作之前的MouseDown](https://github.com/brookhong/brookhong.github.io/issues/19)
+* [按住鼠标时保持显示](https://github.com/brookhong/brookhong.github.io/issues/27)
+* [组合键往上移动](https://github.com/brookhong/brookhong.github.io/issues/32)
+* [maximumLines为0时crash](https://github.com/brookhong/brookhong.github.io/issues/38)
+* [任务栏在上方时设置起始位置有问题](https://github.com/brookhong/brookhong.github.io/issues/43)
+* [添加设置配置显示可拖拽](https://github.com/brookhong/brookhong.github.io/issues/44)
+* [左对齐时重启后有问题](https://github.com/brookhong/brookhong.github.io/issues/45)
 
 ### 2015-06-08 2.0.2.3
 * [支持不括号功能键，去掉Combination Chars的第三个字符即可](https://github.com/brookhong/brookhong.github.io/issues/21)
