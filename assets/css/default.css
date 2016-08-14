@@ -29,7 +29,7 @@ div#content {
     font-size: medium;
 }
 div#content img {
-    width: 60vw;
+    max-width: 60vw;
 }
 div#content p > code,
 div#content li > code
