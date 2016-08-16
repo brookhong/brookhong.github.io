@@ -61,6 +61,8 @@ Surfingkeys does this through key mappings. By default, when you press `sg` in n
 
 The `g` in `sg` is a search alias for google, there are some other built-in search aliases -- like `w` for bing. So press `sw` to search selected with bing. Refer to [Add search alias to omnibar](https://github.com/brookhong/Surfingkeys#add-search-alias-to-omnibar) to add your own search alias, useful for internal company search engines.
 
+![search_selected](https://cloud.githubusercontent.com/assets/288207/17644215/759f1e70-61b3-11e6-8bf8-0bdff7d0c933.gif)
+
 ### The vim-like marks
 
 You can create vim-like marks by pressing `m`, followed by a word character(0-9, A-Z, a-z), used as a marker. For example, if you press `ma` on this page, you'll create a mark named `a` which points to this page. Then pressing `'a` anywhere, you'll jump to this page.
@@ -89,7 +91,16 @@ In normal mode, press capital `I`, then use a hint letter to pick up a input box
 
 For `input` element, the vim editor has only one line, you use vim-bindings keys to edit your text, then press `Enter` or `:w` to write your text back to the input element.
 
+![input_with_vim](https://cloud.githubusercontent.com/assets/288207/17644219/75a72b2e-61b3-11e6-8ce2-06c9cc94aeca.gif)
+
 For `textarea` element, the vim editor is opened in bigger size, after you complete your edit, then press `Ctrl-Enter` or `:w` to write your text back to the textarea element.
+
+![textarea_with_vim](https://cloud.githubusercontent.com/assets/288207/17644217/75a27e44-61b3-11e6-8f21-9cd79d3c5776.gif)
+
+For `select` element, the vim editor is opened in bigger size, you are expected to edit the text, instead of, to search your option and jump to the line, then press `Enter` to select it. This is much handy for `select` element that has dozens of options.
+
+![select_with_vim](https://cloud.githubusercontent.com/assets/288207/17644218/75a458a4-61b3-11e6-8ce7-eedcc996745c.gif)
+
 
 `Esc` or `:q` to quit vim editor without writing text back.
 
@@ -105,9 +116,24 @@ Remember that in insert mode, press `Ctrl-i` to open vim editor.
 
 `Tab` completion works with all URLs from bookmark/history, `Space` to choose a match from popup.
 
+![url_with_vim](https://cloud.githubusercontent.com/assets/288207/17644220/75f8eedc-61b3-11e6-9630-da2250ac5f10.gif)
+
 ### Edit settings
 
 `se` to open settings editor, `:w` to save settings.
+
+## Markdown preview
+
+1. copy your markdown source into clipboard.
+1. `sm` to open markdown preview, which will preview markdown from clipboard.
+1. Then on the preview page, another `sm` will open vim editor to edit markdown source.
+1. `:wp` to refresh preview.
+
+![markdown](https://cloud.githubusercontent.com/assets/288207/17669897/0b6fbaf6-6342-11e6-8583-86eb8691190d.gif)
+
+By default, Surfingkeys uses this [markdown parser](https://github.com/chjj/marked) to preview markdown, if you'd like to use [github markdown API](https://developer.github.com/v3/markdown/) to parse your markdown, please add below line to your settings:
+
+    settings.useLocalMarkdownAPI = false;
 
 ## Shortcuts reference
 

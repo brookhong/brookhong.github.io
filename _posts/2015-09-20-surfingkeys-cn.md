@@ -33,6 +33,8 @@ Surfingkeys的配置全部写在一段javascript中，很容易添加自己的�
 * 一个多功能书签地址栏
 * 前缀数字可多次重复相应操作
 * 使用VIM编辑页面上各种输入框
+* 点命令重复前一个操作
+* `sm`预览markdown
 
 ## 快速上手
 安装本插件以后，打开你要访问的站点。先按`?`或者`u`看看帮助信息，按`Esc`可以关掉帮助信息。
@@ -51,6 +53,14 @@ Surfingkeys的配置全部写在一段javascript中，很容易添加自己的�
 ![visual](https://cloud.githubusercontent.com/assets/288207/16182120/1cc536da-36d5-11e6-9e08-293cdb8fbcd2.png)
 * `T` 切换标签页
 ![tabs](https://cloud.githubusercontent.com/assets/288207/10328839/f0143ffe-6ceb-11e5-8eee-962db94b2c22.png)
+
+## 打开连接
+
+默认的拨号键有`asdfgqwertzxcvb`，如果按了一个非拨号键，会自动退出拨号。下面的设置可以改成右手习惯：
+
+    Hints.characters = 'yuiophjklnm'; // for right hand
+
+当拨号盘有重叠上，可以按`Shift`翻转重叠的拨号盘。
 
 ## Surfingkeys支持的模式
 
@@ -75,14 +85,37 @@ Surfingkeys有三种模式：normal，visual和insert。
 1. 按下`sg`看看发生了什么。
 1. 再按下`v`回到normal mode。
 
+![search_selected](https://cloud.githubusercontent.com/assets/288207/17644215/759f1e70-61b3-11e6-8bf8-0bdff7d0c933.gif)
+
 ### Insert mode
 
 当输入焦点定位到各类输入框时（无论你是通过`i`或`f`选择定位还是鼠标点击定位的），就进入该模式。
 通过函数`imapkey`添加的所有按键都只在这种模式下有用。
 
+    `Ctrl - i` 打开vim编辑器。
+
 ### 查找
 
 查找不是模式，但是它会让你自动进入visual mode. 按`/`打开查找栏，输入你要查找的文字，你会看到所有匹配的文字会被高亮。按回车完成查找，这时你会自动进入visual mode -- `Caret`。按`n`定位下一个，`N`定位前一个。
+
+## 搜索栏
+
+一些需要用户输入的功能通过搜索栏提供，比如
+
+* 用`t`打开网页（从收藏夹或访问历史）
+* 用`b`打开收藏夹
+* 用`og`/`ob`等打开搜索引擎
+* 用`:`打开命令模式
+
+用`t`打开搜索栏时，
+
+    `Ctrl - d` 可以从收藏夹或访问历史中删除选中项
+
+用`b`打开搜索栏时，
+
+    `Ctrl - <any letter>` 创建相应的类似vim的全局标示。
+
+![search_engine](https://cloud.githubusercontent.com/assets/288207/17644214/759ef1d4-61b3-11e6-9bd9-70c38c8b80e0.gif)
 
 ## 搜索选中文本
 
@@ -96,7 +129,7 @@ search_leader_key(`s`)加上大写的别名(`G`)会打开搜索框让你可以�
 
 ## 类vim标示
 
-简单说，vim中的marks就是按`m`，然后跟一个字符（0-9，A-Z，a-z），标示一下当前网址。之后，你随时按`'`跟上你定义的那个标示符，就会跳转到该网址。
+简单说，vim中的marks就是按`m`，然后跟一个字符（a-z为当前页内标示，其它的如0-9，A-Z为全局标示），标示一下当前网址。之后，你随时按`'`跟上你定义的那个标示符，就会跳转到该网址。
 
 除了`m`键创建标示外，你还可以从收藏夹里按住Ctrl，加上标示符来创建。如下：
 
@@ -104,7 +137,7 @@ search_leader_key(`s`)加上大写的别名(`G`)会打开搜索框让你可以�
 1. 随便输点啥，定位到你要标示的网址。
 1. 按住Ctrl，加上你选中的标示符，比如`f`。
 
-之后，按`'f`就可以直接打开该网址来。
+之后，按`'F`就可以直接打开该网址来。
 
 这个功能对那些你需要经常访问对网址很有用，两个键直达。`om`可以查看你已创建的标示。
 
@@ -202,9 +235,19 @@ search_leader_key(`s`)加上大写的别名(`G`)会打开搜索框让你可以�
 
 ## 开关热键
 
-默认情况下，按`alt-s`可以在当前站点开关Surfingkeys。当Surfingkeys处于关闭状态时，除了热键，其它所有按键映射都停止工作。用如下设置修改热键：
+默认情况下，按`Alt-s`可以在当前站点开关Surfingkeys。当Surfingkeys处于关闭状态时，除了热键，其它所有按键映射都停止工作。用如下设置修改热键：
 
-    Events.hotKey = 'i'; // 热键只能是一个按键，但可以带辅助按键，不能是`gg`这样的一串按键。
+    map('<Ctrl-i>', '<Alt-s>'); // 热键只能是一个按键，但可以带辅助按键，不能是`gg`这样的一串按键。
+
+当Surfingkeys在某个网站被`Alt-s`关掉时，这个状态会被保存在设置里，如
+
+    "blacklist": {
+        "https://github.com": 1
+    },
+
+再按一次`Alt-s`会从settings.blacklist中删除该站点。另外，`yj`可以把当前设置复制到系统剪贴板。
+
+另一个禁用Surfingkeys的方法是用`settings.blacklistPattern`，请参考[regex for disabling](https://github.com/brookhong/Surfingkeys/issues/63).
 
 ## 代理设置
 
@@ -245,7 +288,7 @@ SwitchySharp是个很好的代理管理插件，但我的用法很简单，
 
 * `spi`, `:proxyInfo`快捷键。
 
-## ACE VIM编辑器
+## VIM编辑器
 
 Surfingkeys集成了ACE里的VIM编辑器，用于：
 
@@ -258,7 +301,16 @@ Surfingkeys集成了ACE里的VIM编辑器，用于：
 在Normal模式，按大写的`I`，然后按相应的字母选择一个输入框。这时会打开一个VIM编辑器。对于单行输入框`input`和多行输入框`textarea`，打开的VIM编辑器会有点细微的不同。
 
 对于单行输入框`input`，打开的VIM编辑器只有一行，你可以通过各类VIM按键编辑你的文本，按`Enter`或者`:w`就会把VIM编辑器里的内容写回相应的输入框。
+
+![input_with_vim](https://cloud.githubusercontent.com/assets/288207/17644219/75a72b2e-61b3-11e6-8ce2-06c9cc94aeca.gif)
+
 对于多行输入框`textarea`，打开的VIM编辑器有多行，在你完成编辑之后，按`Ctrl-Enter`或者`:w`就会把VIM编辑器里的内容写回相应的输入框。
+
+![textarea_with_vim](https://cloud.githubusercontent.com/assets/288207/17644217/75a27e44-61b3-11e6-8f21-9cd79d3c5776.gif)
+
+对于下拉列表`select`，打开的VIM编辑器有多行，但你不能编辑其中的文本，你只能搜索你需要的选项，跳到那一行，然后按`Enter`选中它。这对那种有几十个以上选项的下拉列表尤其有用。
+
+![select_with_vim](https://cloud.githubusercontent.com/assets/288207/17644218/75a458a4-61b3-11e6-8ce7-eedcc996745c.gif)
 
 按键`Esc`或`:q`可退出VIM编辑器，不写回输入。
 
@@ -274,23 +326,50 @@ Surfingkeys集成了ACE里的VIM编辑器，用于：
 
 `Tab`键可以从书签和访问历史中搜索匹配的URL，然后按空格键补齐。
 
+![url_with_vim](https://cloud.githubusercontent.com/assets/288207/17644220/75f8eedc-61b3-11e6-9630-da2250ac5f10.gif)
+
 ### 编辑设置
 
 `se`打开设置编辑器, `:w`保存设置。
+
+## 点命令重复前一个操作
+
+[重复前一个操作](https://github.com/brookhong/Surfingkeys/issues/67)
+
+所有normal模式下的按键都可以由点来重复，除了那些在创建时指定`repeatIgnore`为`true`的按键，如
+
+    mapkey('e', '#2Scroll a page up', 'Normal.scroll("pageUp")', {repeatIgnore: true});
+
+这样，`.`就不会往上翻页，即使你刚刚按了`e`。
+
+## Markdown预览
+
+1. 复制markdown代码到系统剪贴板。
+1. `sm`预览剪贴板里的markdown。
+1. 在预览页，再按`sm`会打开vim编辑器编辑markdown。
+1. `:wp`刷新预览。
+
+![markdown](https://cloud.githubusercontent.com/assets/288207/17669897/0b6fbaf6-6342-11e6-8583-86eb8691190d.gif)
+
+Surfingkeys默认使用[这个markdown分析器](https://github.com/chjj/marked)，如果你想用[github提供的API](https://developer.github.com/v3/markdown/)，可以设置：
+
+    settings.useLocalMarkdownAPI = false;
 
 ## 配置参考
 
 ### 添加一个按键映射
 
-    mapkey(keystroke, help_string, action_code, [expect_char], [domain_pattern])
+    mapkey(keystroke, help_string, action_code, [options])
 
 | 参数  | 含义 |
 |:---------------| :-----|
 |**keystroke**                   | 字符串，触发某个操作的按键|
 |**help_string**                 | 字符串，帮助描述，会自动出现在`u`打开的帮助小窗里。|
 |**action_code**                 | 字符串或者函数，一段Javascript代码，或者一个Javascript函数。|
-|**expect_char**                 | 布尔值[可选]，下一个按键是否为action_code的参数， 可以参考`m`或`'`的设置。|
-|**domain_pattern**              | 正则表达式[可选]，表明只有当域名匹配时，该按键映射才会生效。比如，`/github\.com/i` 说明按键映射只在github.com上生效。|
+|**options**                     | object, 字段属性如下 |
+|**extra_chars**                 | 布尔值[可选]，下一个按键是否为action_code的参数， 可以参考`m`或`'`的设置。|
+|**domain**                      | 正则表达式[可选]，表明只有当域名匹配时，该按键映射才会生效。比如，`/github\.com/i` 说明按键映射只在github.com上生效。|
+|**repeatIgnore**                | 布尔值[可选]，是否可通过点命令重复该按键。|
 
 一个示例，在不同网站上映射相同的按键到不同的操作：
 
@@ -299,7 +378,7 @@ Surfingkeys集成了ACE里的VIM编辑器，用于：
 
 可视化模式下的mapkey
 
-    vmapkey(keystroke, help_string, action_code, [expect_char], [domain_pattern])
+    vmapkey(keystroke, help_string, action_code, [options])
 
 ### 映射按键到其他按键
 
