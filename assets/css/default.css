@@ -36,15 +36,21 @@ div#content li > code
 {
     padding-top: 0.2em;
     padding-bottom: 0.2em;
-    background: #b4d5e4;
-    border: 1px solid #63889A;
-    border-radius: 2px;
+    font-size: 85%;
+    background-color: rgba(0,0,0,0.04);
+    border-radius: 3px;
 }
+div#content p > code::before,
+div#content p > code::after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
 div#content pre {
     padding: 12px;
     background: #eee;
     border-radius: 2px;
-    border: 1px solid #bbb;
+    border: 1px solid #e0e0e0;
     border-left-width: 4px;
     word-wrap: break-word;
 }

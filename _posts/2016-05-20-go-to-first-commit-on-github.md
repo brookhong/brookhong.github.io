@@ -17,6 +17,6 @@ Add below into your own settings,
         var page_size = 35;
         var fp = Math.ceil(commits/page_size);
         window.location.href = "{0}?page={1}".format($('li.commits>a')[0].href, fp);
-    }, 0, /github.com/i);
+    }, {domain: /github.com/i});
 
 Then on a project home page(with `Code` tab active) like https://github.com/JakeWharton/butterknife, press `gl` to go to last page.

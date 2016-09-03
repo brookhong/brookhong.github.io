@@ -13,8 +13,8 @@ Surfingkeys是这样解决这个问题的。
 
 `se`打开Surfingkeys的设置，在最后插入下面这段设置代码，保存一下。
 
-    mapkey('zz', '收起', "clickOn($('a').regex(/tosmall/i, $.fn.attr, ['action-type']))", 0, /weibo.com/i);
-    mapkey('q', '点开微博上的图片/视频', 'Hints.create("div.media_box img", Hints.dispatchMouseClick)', 0, /weibo.com/i);
+    mapkey('zz', '收起', "clickOn($('a').regex(/tosmall/i, $.fn.attr, ['action-type']))", {domain: /weibo.com/i});
+    mapkey('q', '点开微博上的图片/视频', 'Hints.create("div.media_box img", Hints.dispatchMouseClick)', {domain: /weibo.com/i});
 
 然后，打开微博，`q`就可以选择打开你想看的图片或者视频了，看完了`zz`一下收起。
 
@@ -23,5 +23,5 @@ Surfingkeys是这样解决这个问题的。
 
 下面的两个设置我在百度随心听上用来切歌的，
 
-    mapkey(']]', '下一首', 'clickOn("li.fm-next a")', 0, /fm.baidu.com/i);
-    mapkey('[[', '上一首', 'clickOn("div.pre-img-wrapper p")', 0, /fm.baidu.com/i);
+    mapkey(']]', '下一首', 'clickOn("li.fm-next a")', {domain: /fm.baidu.com/i});
+    mapkey('[[', '上一首', 'clickOn("div.pre-img-wrapper p")', {domain: /fm.baidu.com/i});

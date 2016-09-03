@@ -37,7 +37,7 @@ Javascript is good enough for users to create their own mappings.  I don't need 
 So I created an extension -- [Surfingkeys](https://github.com/brookhong/Surfingkeys) which works like this:
 
     mapkey('<Ctrl-y>', 'Show me the money', function() {
-        Normal.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
+        Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
     });
 
 The first parameter is the keystroke, the second is a help message that describes the action, which will also be displayed in help popover.
@@ -351,7 +351,7 @@ The default shortcuts are created per the rules:
 
     map('u', 'e');
     mapkey('p', "Open the clipboard's URL in the current tab", function() {
-        Normal.getContentFromClipboard(function(response) {
+        Front.getContentFromClipboard(function(response) {
             window.location.href = response.data;
         });
     });
