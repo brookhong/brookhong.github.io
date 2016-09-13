@@ -1,5 +1,5 @@
 ---
-layout: post_cn
+layout: post
 title: Surfingkeys可以这样帮你看微博上的图片视频
 category: cn
 ---

@@ -1,5 +1,5 @@
 ---
-layout: post_cn
+layout: post
 title: 用DBGPavim在Vim中调试PHP/Python程序
 category: cn
 ---

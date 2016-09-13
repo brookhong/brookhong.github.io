@@ -1,5 +1,5 @@
 ---
-layout: post_cn
+layout: post
 title: Android开发环境Vanilla
 category: cn
 ---

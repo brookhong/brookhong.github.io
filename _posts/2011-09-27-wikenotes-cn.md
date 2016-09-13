@@ -1,5 +1,5 @@
 ---
-layout: post_cn
+layout: post
 title: WikeNotes个人知识管家
 category: cn
 ---

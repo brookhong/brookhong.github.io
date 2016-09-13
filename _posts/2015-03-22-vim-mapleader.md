@@ -1,5 +1,5 @@
 ---
-layout: post_cn
+layout: post
 title: 为什么以及如何使用s作为mapleader
 category: cn
 ---

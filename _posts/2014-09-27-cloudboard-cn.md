@@ -1,5 +1,5 @@
 ---
-layout: post_cn
+layout: post
 title: 基于github gist的跨机器剪贴板
 category: cn
 ---

@@ -1,5 +1,5 @@
 ---
-layout: post_cn
+layout: post
 title: Surfingkeys -- 用javascript和键盘扩展你的chrome
 category: cn
 ---

@@ -1,5 +1,5 @@
 ---
-layout: post_cn
+layout: post
 title: 用Zed Attack Proxy (ZAP)拦截调试HTTP/HTTPS
 category: cn
 ---

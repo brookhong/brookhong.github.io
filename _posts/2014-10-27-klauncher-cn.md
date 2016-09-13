@@ -1,5 +1,5 @@
 ---
-layout: post_cn
+layout: post
 title: 通过vim快速启动程序
 category: cn
 ---

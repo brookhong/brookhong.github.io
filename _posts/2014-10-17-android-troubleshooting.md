@@ -1,5 +1,5 @@
 ---
-layout: post_cn
+layout: post
 title: Android开发常见问题
 category: cn
 ---
