@@ -16,7 +16,7 @@ require(
         'navbar',
         'ga'
     ],
-    function(Navbar) {
+    function(Navbar, brook_ga) {
         var navbar = new Navbar({});
         navbar.render();
 

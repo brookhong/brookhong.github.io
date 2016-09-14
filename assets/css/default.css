@@ -69,3 +69,13 @@ a:hover {
     background-color: #55f;
     color: #fff;
 }
+@media only screen and (max-width: 767px) {
+    div#toc, div#menu {
+        display: none;
+    }
+    div#content {
+        width: 100%;
+        padding: 4px;
+    }
+    width: 80%;
+}

@@ -15,5 +15,6 @@ define(
         }
         brook_ga('create', 'UA-64048030-1', 'auto');
         brook_ga('send', 'pageview', { 'page': window.location.href, 'title': document.title });
+        return brook_ga;
     }
 );
