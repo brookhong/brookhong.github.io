@@ -27,17 +27,16 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class='<%- activeSection === "posts" ? "active" : "" %>' data-toggle="collapse" data-target=".in"><a href="#" section='posts'><%- home %></a></li>
-                <li class='<%- activeSection === "profile" ? "active" : "" %>' data-toggle="collapse" data-target=".in"><a href="#" section='profile'><%- about %></a></li>
-                <li data-toggle="collapse" data-target=".in"><a href="#" id="changeLocale" locale="<%- locale %>"><%- locale %></a></li>
+                <li class='<%- activeSection === "posts" ? "active" : "" %>' data-toggle="collapse" data-target=".in"><a href="#" @click="showContent" section='posts'><%- home %></a></li>
+                <li class='<%- activeSection === "profile" ? "active" : "" %>' data-toggle="collapse" data-target=".in"><a href="#" @click="showContent" section='profile'><%- about %></a></li>
+                <li data-toggle="collapse" data-target=".in"><a href="#" @click="changeLocale" locale="<%- locale %>"><%- locale %></a></li>
             </ul>
         </div>
     </div>
 </div>
 </script>
 
-<div id="navbarWrapper">
-</div>
+<navbar></navbar>
 
 <div id="toc">
     <ul>

@@ -1,31 +1,16 @@
-define('locale', [], function() {
-    return {
-        "English": {
-            home: "Home",
-            about: "About",
-            locale: "中文"
-        },
-        "中文": {
-            home: "主页",
-            about: "关于",
-            locale: "English"
-        }
-    }
-});
-
+// create navbar with backbone
 define(
     [
         'backbone',
         'underscore',
         'locale',
-        'text!/assets/template/navbar.html',
         'bootstrap',
         'jquery-cookie'
     ],
-    function(Backbone, _, localeData, tplNavbar) {
+    function(Backbone, _, localeData) {
         var Navbar = Backbone.View.extend({
             el: $('#navbarWrapper'),
-            navTemplate: _.template(tplNavbar),
+            navTemplate: _.template($("#navbar-template").html()),
             events: {
                 "click #changeLocale": "changeLocale",
                 "click a[section]": function(evt) {

@@ -79,3 +79,56 @@ a:hover {
     }
     width: 80%;
 }
+////////////////////////////////////////////////////////////////////////////////
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
+    display: none;
+}
+
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+.tip {
+    stroke: green;
+    font: 19px sans-serif;
+}
+.state {
+    cursor: pointer;
+}
+.button {
+    cursor: pointer;
+    stroke: blue;
+    font: 12px sans-serif;
+}
+.overlay {
+    cursor: move;
+    fill: none;
+    pointer-events: all;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
+    stroke: #000;
+}
+
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
