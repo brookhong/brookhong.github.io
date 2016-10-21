@@ -9,7 +9,7 @@ category: en
 
 [Surfingkeys -- expand your browser with javascript and keyboard](https://github.com/brookhong/Surfingkeys)
 
-[Demo on youtube](https://www.youtube.com/watch?v=ROqfE9d7Iwo&feature=youtu.be)
+[Demo on youtube](https://www.youtube.com/watch?v=crHHfd5epeg)
 
 About two years ago, I posted a question -- [What else tools that can help one like VIM?](http://www.linkedin.com/grp/post/154653-119166234#commentID_discussion%3A119166234%3Agroup%3A154653) on linkedin.com.
 
