@@ -31,5 +31,8 @@ require(
                 });
             }
         });
+        $('a').click(function() {
+            brook_ga('send', 'event', 'outbound', this.href, $(this).text());
+        });
     }
 );
