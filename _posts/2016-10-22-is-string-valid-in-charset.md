@@ -68,6 +68,7 @@ UTF-8字符集是一个较大的字符集，很多国内的系统都在用GBK、
     System.out.println(isStringValidInCharset("中文abc", "GBK"));
     System.out.println(isStringValidInCharset("å›¾ä¹¦", "GBK"));
 
+[演示视频](https://www.youtube.com/watch?v=v13g58kSzdA)
 
 完整的测试代码
 
