@@ -1,6 +1,6 @@
 ---
 layout: post
-title: debug chrome with gdb
+title: debug Chromium with gdb under Ubuntu
 category: en
 ---
 
@@ -9,7 +9,7 @@ category: en
 
 ## Prepare
 
-1. build chrome by referring [The Chromium Projects](http://dev.chromium.org/developers/how-tos/get-the-code) and [depot_tools_tutorial](https://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html#_setting_up)
+1. build Chromium by referring [The Chromium Projects](http://dev.chromium.org/developers/how-tos/get-the-code) and [depot_tools_tutorial](https://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html#_setting_up)
 
         git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
         export PATH=/works/depot_tools:$PATH
@@ -21,25 +21,33 @@ category: en
             subprocess.check_call(['curl', '-x', '127.0.0.1:8123', '-L', url, '-o', tarball])
         ./src/build/install-build-deps.sh
 
-    in case of that you need proxy to sync code.
-        HTTPS_PROXY=http://127.0.0.1:8123 gclient sync
+    in case of that you need proxy to sync code, create ~/.boto
+
+        [Boto]
+        proxy=127.0.0.1
+        proxy_port=8123
+
+    then
+
+        export NO_AUTH_BOTO_CONFIG=~/.boto
+        HTTP_PROXY=http://127.0.0.1:8123 gclient sync
 
         fetch blink
         ./gn gen out/Default
         ninja -v -C out/Default
 
-1. run chrome
+1. run Chromium
 
         cd /works/depot_tools/src
         ./out/Default/chrome
 
 ## Debugging existing Tab
 
-1. `Shift-Esc` to open Task manager of Chrome, get the process id of the Tab you'd like to debug
+1. `Shift-Esc` to open Task manager of Chromium, get the process id of the Tab you'd like to debug
 
 1. run gdb to attach the process
 
-        gdb -p <chrome process id>
+        gdb -p <Chromium process id>
 
 1. set breakpoint after symbols loaded.
 
@@ -159,7 +167,7 @@ category: en
 
         (gdb) set follow-fork-mode child
 
-1. click the new-tab button in title bar of Chrome, breakpoint will be hit.
+1. click the new-tab button in title bar of Chromium, breakpoint will be hit.
 
         [New process 1030]
         [Thread debugging using libthread_db enabled]
