@@ -6,6 +6,8 @@ div#toc {
 }
 div#toc li {
     font-size: 10pt;
+    cursor: pointer;
+    color: blue;
 }
 
 div.footer, div.title {
