@@ -18,6 +18,9 @@ keystroke visualizer for Windows,  lets you easily display your keystrokes while
 
 ## History
 
+### 2017-01-29 2.0.2.5
+* [Windows Defender identifies keycastow as Win32/Rundas!plock trojan.](https://github.com/brookhong/brookhong.github.io/issues/54)Rebuild on Windows 10.
+
 ### 2016-08-10 2.0.2.5
 * [Add deferred label to get rid of mousedown before click](https://github.com/brookhong/brookhong.github.io/issues/19)
 * [Keep display on mouse down is holding](https://github.com/brookhong/brookhong.github.io/issues/27)
