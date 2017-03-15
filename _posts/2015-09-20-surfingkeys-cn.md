@@ -7,7 +7,7 @@ category: cn
 {{ page.title }}
 ================
 
-[供墙内的同学下载的zip](/assets/downloads/sk.zip)
+[供墙内的同学下载的zip](/assets/downloads/Surfingkeys.crx)
 
 Surfingkeys和现有的一些插件一样，让你尽可能的通过键盘来使用chrome浏览器，比如跳转网页，上下左右滚屏。但不只是给vim用户使用，Surfingkeys的基本特性是让你自己写一段Javascript脚本，然后通过`mapkey`映射到某些按键。之后当你按了那几个键以后，对应的Javascript脚本就会被执行。
 
