@@ -196,7 +196,7 @@ category: en
         #11 0x00005558f67cf772 in ChromeMain (argc=2, argv=0x7fffd75fd578) at ../../chrome/app/chrome_main.cc:85
         #12 0x00005558f67cf722 in main (argc=2, argv=0x7fffd75fd578) at ../../chrome/app/chrome_exe_main_aura.cc:17
 
-        (gdb) info inferiors 
-          Num  Description       Executable        
-        * 2    process 1030      /works/depot_tools/src/out/Default/chrome 
+        (gdb) info inferiors
+          Num  Description       Executable
+        * 2    process 1030      /works/depot_tools/src/out/Default/chrome
           1    <null>            /works/depot_tools/src/out/Default/chrome

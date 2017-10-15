@@ -9,7 +9,7 @@ category: en
 
 After Chromium.app is built successfully, launch it, then start lldb
 
-    $ lldb "/works/depot_tools/src/out/Default/Chromium.app/Contents/Versions/55.0.2860.0/Chromium Helper.app/Contents/MacOS/Chromium Helper"
+    $ lldb "/works/depot_tools/src/out/Default/Chromium.app/Contents/Versions/60.0.3077.0/Chromium Helper.app/Contents/MacOS/Chromium Helper"
 
 
 ## Debugging existing Tab
