@@ -37,6 +37,57 @@ I fecthed Chromium source code, and created a patch to whitelist Surfingkeys, so
 
 ## How the patch works
 
+patch code
+
+    diff --git a/content/browser/frame_host/navigator_impl.cc b/content/browser/frame_host/navigator_impl.cc
+    index f637193e644f..60f9f5cd3644 100644
+    --- a/content/browser/frame_host/navigator_impl.cc
+    +++ b/content/browser/frame_host/navigator_impl.cc
+    @@ -147,6 +147,10 @@ void NavigatorImpl::CheckWebUIRendererDoesNotDisplayNormalURL(
+                   ->GetController()
+                   ->GetBrowserContext(),
+               url);
+    +  bool whitelistedSurfingkeys = url.host() == "gfbliohnnapiefjpjlpjnehglfpaknnc";
+    +  if (whitelistedSurfingkeys) {
+    +    is_allowed_in_web_ui_renderer = true;
+    +  }
+       if ((enabled_bindings & BINDINGS_POLICY_WEB_UI) &&
+           !is_allowed_in_web_ui_renderer) {
+         // Log the URL to help us diagnose any future failures of this CHECK.
+    diff --git a/extensions/renderer/extension_injection_host.cc b/extensions/renderer/extension_injection_host.cc
+    index 86374f581ba6..376c887b150a 100644
+    --- a/extensions/renderer/extension_injection_host.cc
+    +++ b/extensions/renderer/extension_injection_host.cc
+    @@ -50,6 +50,11 @@ PermissionsData::AccessType ExtensionInjectionHost::CanExecuteOnFrame(
+         content::RenderFrame* render_frame,
+         int tab_id,
+         bool is_declarative) const {
+    +  if (render_frame->GetWebFrame()->GetSecurityOrigin().Host().Utf8() != extension_->id()
+    +      && (extension_->id() == "gfbliohnnapiefjpjlpjnehglfpaknnc")) {
+    +    return PermissionsData::ACCESS_ALLOWED;
+    +  }
+    +
+       blink::WebSecurityOrigin top_frame_security_origin =
+           render_frame->GetWebFrame()->Top()->GetSecurityOrigin();
+       // Only whitelisted extensions may run scripts on another extension's page.
+    diff --git a/extensions/renderer/user_script_set.cc b/extensions/renderer/user_script_set.cc
+    index 8b50ecc2a192..653829453f0a 100644
+    --- a/extensions/renderer/user_script_set.cc
+    +++ b/extensions/renderer/user_script_set.cc
+    @@ -218,7 +218,11 @@ std::unique_ptr<ScriptInjection> UserScriptSet::GetInjectionForScript(
+       GURL effective_document_url = ScriptContext::GetEffectiveDocumentURL(
+           web_frame, document_url, script->match_about_blank());
+     
+    -  if (!script->MatchesURL(effective_document_url))
+    +  // whitelisted Surfingkeys only on top frame
+    +  bool whitelistedSurfingkeys = (!web_frame->Parent()
+    +      && (script->extension_id() == "gfbliohnnapiefjpjlpjnehglfpaknnc"));
+    +
+    +  if (!script->MatchesURL(effective_document_url) && !whitelistedSurfingkeys)
+         return injection;
+     
+       std::unique_ptr<ScriptInjector> injector(
+
 whitelist Surfingkeys here.
 
       * frame #0: `extensions::ExtensionInjectionHost::CanExecuteOnFrame(this=0x00007f9882441fb0, document_url=0x00007fff5a0c8268, render_frame=0x00007f9883834400, tab_id=2, is_declarative=false) const at extension_injection_host.cc:53 [opt]
