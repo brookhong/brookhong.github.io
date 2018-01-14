@@ -10,7 +10,6 @@ category: cn
 这段时间我把[Surfingkeys](https://github.com/brookhong/Surfingkeys)移植到Firefox，了解到一些东西，这里对这两个浏览器做些简单的比较。这里不涉及到Firefox 57之前的版本，因为我在此之前已经很长时间没用Firefox了。
 
 | | Chrome(63) | Firefox(57) |
-|:|
 | 扩展／插件 | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ |
 | 开发者工具 | ⭐⭐⭐⭐⭐ | ⭐⭐ |
 | PDF查看 | ⭐⭐ | ⭐⭐⭐⭐ |

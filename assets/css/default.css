@@ -58,6 +58,25 @@ div#content {
     box-sizing: border-box;
 }
 
+div#content table th {
+    font-weight: bold;
+}
+
+div#content table th,
+div#content table td {
+    padding: 6px 13px;
+    border: 1px solid #ddd;
+}
+
+div#content table tr {
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+}
+
+div#content table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     font: 125%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif;

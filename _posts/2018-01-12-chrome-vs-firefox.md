@@ -10,7 +10,6 @@ category: en
 I ported [Surfingkeys](https://github.com/brookhong/Surfingkeys) from Chrome to Firefox(above 57, which has webextension API supports), and learned some things from the process. Here is a simple comparison between them, which does not cover Firefox before 57, since I had not used Firefox for a lot of while before this.
 
 | | Chrome(63) | Firefox(57) |
-|:|
 | Extension | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ |
 | Devtools | ⭐⭐⭐⭐⭐ | ⭐⭐ |
 | PDF viewer | ⭐⭐ | ⭐⭐⭐⭐ |
