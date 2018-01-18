@@ -36,9 +36,11 @@ These things make it hard, for example, to map a key to a javascript function I'
 Javascript is good enough for users to create their own mappings.  I don't need to create another lame scripting language, which is painful for both me and the users.
 So I created an extension -- [Surfingkeys](https://github.com/brookhong/Surfingkeys) which works like this:
 
-    mapkey('<Ctrl-y>', 'Show me the money', function() {
-        Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
-    });
+```javascript
+mapkey('<Ctrl-y>', 'Show me the money', function() {
+    Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
+});
+```
 
 The first parameter is the keystroke, the second is a help message that describes the action, which will also be displayed in help popover.
 The third parameter is what you want the keystroke to trigger, it can be a snippet of Javascript code or a Javascript function.
@@ -349,26 +351,28 @@ The default shortcuts are created per the rules:
 
 ### Settings with key mappings like vimium
 
-    map('u', 'e');
-    mapkey('p', "Open the clipboard's URL in the current tab", function() {
-        Front.getContentFromClipboard(function(response) {
-            window.location.href = response.data;
-        });
+```javascript
+map('u', 'e');
+mapkey('p', "Open the clipboard's URL in the current tab", function() {
+    Front.getContentFromClipboard(function(response) {
+        window.location.href = response.data;
     });
-    map('P', 'cc');
-    map('gi', 'i');
-    map('F', 'af');
-    map('gf', 'w');
-    map('`', '\'');
-    // save default key `t` to temp key `>_t`
-    map('>_t', 't');
-    // create a new key `t` for default key `on`
-    map('t', 'on');
-    // create a new key `o` for saved temp key `>_t`
-    map('o', '>_t');
-    map('H', 'S');
-    map('L', 'D');
-    map('gt', 'R');
-    map('gT', 'E');
-    map('K', 'R');
-    map('J', 'E');
+});
+map('P', 'cc');
+map('gi', 'i');
+map('F', 'af');
+map('gf', 'w');
+map('`', '\'');
+// save default key `t` to temp key `>_t`
+map('>_t', 't');
+// create a new key `t` for default key `on`
+map('t', 'on');
+// create a new key `o` for saved temp key `>_t`
+map('o', '>_t');
+map('H', 'S');
+map('L', 'D');
+map('gt', 'R');
+map('gT', 'E');
+map('K', 'R');
+map('J', 'E');
+```
