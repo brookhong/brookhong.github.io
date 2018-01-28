@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Surfingkeys -- A better alternative for vimium or cVim
+description: chrome extension vim Vimium firefox add-on Vimperator VimFx
 category: en
 ---
 

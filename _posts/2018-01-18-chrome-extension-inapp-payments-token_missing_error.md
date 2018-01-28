@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Chrome Extension InApp Payments: TOKEN_MISSING_ERROR
+title: Chrome Extension InApp Payments - TOKEN_MISSING_ERROR
 category: en
 ---
 

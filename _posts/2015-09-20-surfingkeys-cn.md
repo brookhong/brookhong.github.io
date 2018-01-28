@@ -1,13 +1,15 @@
 ---
 layout: post
 title: Surfingkeys -- 用javascript和键盘扩展你的chrome
+description: chrome 扩展 vim Vimium firefox 插件 Vimperator VimFx
 category: cn
 ---
 
 {{ page.title }}
 ================
 
-[供墙内的同学下载](/assets/downloads/Surfingkeys.crx)
+[Chrome版供墙内的同学下载](/assets/downloads/Surfingkeys.crx)
+[火狐版](https://addons.mozilla.org/en-US/firefox/addon/surfingkeys_ff/)
 
 Surfingkeys和现有的一些插件一样，让你尽可能的通过键盘来使用chrome浏览器，比如跳转网页，上下左右滚屏。但不只是给vim用户使用，Surfingkeys的基本特性是让你自己写一段Javascript脚本，然后通过`mapkey`映射到某些按键。之后当你按了那几个键以后，对应的Javascript脚本就会被执行。
 
