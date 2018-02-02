@@ -38,6 +38,9 @@ define(
             render: function() {
                 var locale = $.cookie('locale') || "English";
                 locale = localeData[locale];
+                window.disqus_config = function() {
+                    this.language = locale.disqus;
+                };
                 locale.activeSection = $.cookie('section') || "posts";
                 this.$el.html(this.navTemplate(locale));
                 this.showContent();
