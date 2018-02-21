@@ -8,8 +8,10 @@
     </div>
 </script>
 <script type="text/x-template" id="math-result-template">
-    <div class="success">😁<span><%- success %></span></div>
-    <div class="failure">😢<span><%- failure %></span></div>
+    <div id="mathResultSummary">
+        <div class="success">😁<span><%- success %></span></div>
+        <div class="failure">😢<span><%- failure %></span></div>
+    </div>
     <div class="failedTests">
     <% for(var i = 0; i < failedTests.length; ++i) { %>
         <div>

@@ -23,20 +23,20 @@ title: Brook Hong
     z-index: 10;
 }
 
-#mathResult>div {
+#mathResultSummary>div {
     display: inline-block;
     width: 40%;
 }
-#mathResult>div>span {
+#mathResultSummary>div>span {
     padding-left: 10px;
+}
+#mathResultSummary>div.failure {
+    cursor: pointer;
+    color: blue;
 }
 #mathResult>div.failedTests {
     background: #f1f1f1;
     display: none;
-}
-#mathResult>div.failure {
-    cursor: pointer;
-    color: blue;
 }
 
 @keyframes slideOutRight {
