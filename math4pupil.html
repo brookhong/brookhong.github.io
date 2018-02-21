@@ -4,10 +4,10 @@ title: Brook Hong
 ---
 
 <style>
-#mathContent {
-    font-size: 32pt;
-    width: 80%;
-    margin: 10%;
+#mathContentWraper {
+    font-size: 28pt;
+    width: 90%;
+    margin: 0 5%;
 }
 #mathContent input {
     outline: none;
@@ -21,6 +21,22 @@ title: Brook Hong
     font-size: 32pt;
     position: absolute;
     z-index: 10;
+}
+
+#mathResult>div {
+    display: inline-block;
+    width: 40%;
+}
+#mathResult>div>span {
+    padding-left: 10px;
+}
+#mathResult>div.failedTests {
+    background: #f1f1f1;
+    display: none;
+}
+#mathResult>div.failure {
+    cursor: pointer;
+    color: blue;
 }
 
 @keyframes slideOutRight {
@@ -41,7 +57,9 @@ title: Brook Hong
 
 {% include template/math4pupil.html %}
 
-<div id="mathContent">
+<div id="mathContentWraper">
+    <div id="mathContent"></div>
+    <div id="mathResult"></div>
 </div>
 <div class="alert alert-primary" role="alert">Press Enter or Tab to confirm your input.</div>
 <div id="sadFace" style="display: none">😢</div>

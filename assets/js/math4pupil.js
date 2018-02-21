@@ -25,13 +25,14 @@ require(
 
         var math4Pupil = new (Backbone.View.extend({
             el: $('#mathContent'),
-            navTemplate: _.template($("#math-template").html()),
+            navTemplate: _.template($("#math-content-template").html()),
             events: {
                 "keydown input": function(e) {
                     if (e.which === 13 || e.which === 9) {
                         if (e.currentTarget.value == this.data.expected) {
                             document.querySelector("audio").play();
                             this.render();
+                            mathResult.trigger('success');
                         } else {
                             var sadFace = $('#sadFace');
                             sadFace.removeClass("slideOutRight");
@@ -42,6 +43,8 @@ require(
                             sadFace.addClass("slideOutRight");
                             e.currentTarget.focus();
                             $(e.currentTarget).val("");
+
+                            mathResult.trigger('failure', this.data);
                         }
                         e.preventDefault();
                         e.stopImmediatePropagation();
@@ -77,5 +80,38 @@ require(
         }));
 
         math4Pupil.render();
+
+        var mathResult = new Backbone.Model({
+            success: 0,
+            failure: 0,
+            failedTests: []
+        });
+        mathResult.on('success', function() {
+            this.attributes.success ++;
+        });
+        mathResult.on('failure', function(data) {
+            this.attributes.failure ++;
+            this.attributes.failedTests.push(data);
+        });
+
+        var mathResultView = new (Backbone.View.extend({
+            model: mathResult,
+            el: $('#mathResult'),
+            events: {
+                "click div.failure>span": function(e) {
+                    this.$el.find('div.failedTests').toggle();
+                }
+            },
+            _template: _.template($("#math-result-template").html()),
+            initialize: function(){
+                this.listenTo(this.model, 'failure', this.render);
+                this.listenTo(this.model, 'success', this.render);
+            },
+            render: function() {
+                this.$el.html(this._template(this.model.attributes));
+            }
+        }));
+
+        mathResultView.render();
     }
 );
