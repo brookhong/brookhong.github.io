@@ -1,0 +1,49 @@
+---
+layout: default
+title: Brook Hong
+---
+
+<style>
+#mathContent {
+    font-size: 32pt;
+    width: 80%;
+    margin: 10%;
+}
+#mathContent input {
+    outline: none;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-width: thick;
+    border-bottom-color: #7f7f84;
+}
+#sadFace {
+    font-size: 32pt;
+    position: absolute;
+    z-index: 10;
+}
+
+@keyframes slideOutRight {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.slideOutRight {
+    opacity: 0;
+    animation: 0.8s ease-in-out 1 forwards slideOutRight;
+}
+</style>
+
+{% include template/math4pupil.html %}
+
+<div id="mathContent">
+</div>
+<div id="sadFace" style="display: none">😢</div>
+<audio src="/assets/audio/yes.mp3" />
+
+<script src="/assets/lib/require.js" data-main="/assets/js/math4pupil.js"></script>
