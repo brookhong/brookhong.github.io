@@ -28,7 +28,7 @@ require(
             navTemplate: _.template($("#math-template").html()),
             events: {
                 "keydown input": function(e) {
-                    if (e.which === 13 || e.which === 32) {
+                    if (e.which === 13 || e.which === 9) {
                         if (e.currentTarget.value == this.data.expected) {
                             document.querySelector("audio").play();
                             this.render();
@@ -43,6 +43,8 @@ require(
                             e.currentTarget.focus();
                             $(e.currentTarget).val("");
                         }
+                        e.preventDefault();
+                        e.stopImmediatePropagation();
                     }
                 }
             },
