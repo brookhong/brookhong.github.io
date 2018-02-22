@@ -29,23 +29,22 @@ require(
             events: {
                 "keydown input": function(e) {
                     if (e.which === 13 || e.which === 9) {
-                        if (e.currentTarget.value == this.data.expected) {
+                        var br = e.currentTarget.getBoundingClientRect();
+                        var result = { exp: this.data };
+                        if (e.currentTarget.value === this.data.expected) {
+                            result.credit = 1;
                             document.querySelector("audio").play();
                             this.render();
-                            mathResult.trigger('success');
                         } else {
-                            var sadFace = $('#sadFace');
-                            sadFace.removeClass("slideOutRight");
-                            var pos = $(e.currentTarget).offset();
-                            sadFace.css('top', pos.top);
-                            sadFace.css('left', pos.left);
-                            sadFace.show();
-                            sadFace.addClass("slideOutRight");
+                            result.credit = -1;
                             e.currentTarget.focus();
                             $(e.currentTarget).val("");
-
-                            mathResult.trigger('failure', this.data);
                         }
+                        math4Pupil.credit({
+                            left: br.left,
+                            top: br.top
+                        }, result.credit);
+                        mathResult.trigger('change', result);
                         e.preventDefault();
                         e.stopImmediatePropagation();
                     }
@@ -62,7 +61,7 @@ require(
                     data.para1 = Math.ceil(Math.random()*100%20);
                     data.para2 = Math.ceil(Math.random()*100%20);
                     data.operator1 = this.generateOperator();
-                    data.expected = eval(data.para1 + data.operator1 + data.para2);
+                    data.expected = eval(data.para1 + data.operator1 + data.para2) + "";
                     if (negativeResult || data.expected >= 0) {
                         break;
                     } else {
@@ -70,6 +69,22 @@ require(
                     }
                 }
                 return data;
+            },
+            credit: function(pos, flag) {
+                var cf = $('#creditFace');
+                var tp = flag > 0 ? $("div.success") : $("div.failure");
+                cf.html(flag > 0 ? "😁" : "😢").show();
+                cf.css("opacity", 1);
+                cf.css("top", pos.top);
+                cf.css("left", pos.left);
+                tp = tp.offset();
+                cf.animate({
+                    opacity: 0.08,
+                    left: tp.left,
+                    top: tp.top
+                }, 500, function() {
+                    cf.hide();
+                });
             },
             render: function() {
                 this.data = this.generate();
@@ -86,12 +101,13 @@ require(
             failure: 0,
             failedTests: []
         });
-        mathResult.on('success', function() {
-            this.attributes.success ++;
-        });
-        mathResult.on('failure', function(data) {
-            this.attributes.failure ++;
-            this.attributes.failedTests.push(data);
+        mathResult.on('change', function(data) {
+            if (data.credit > 0) {
+                this.attributes.success ++;
+            } else {
+                this.attributes.failure ++;
+                this.attributes.failedTests.push(data.exp);
+            }
         });
 
         var mathResultView = new (Backbone.View.extend({
@@ -104,8 +120,7 @@ require(
             },
             _template: _.template($("#math-result-template").html()),
             initialize: function(){
-                this.listenTo(this.model, 'failure', this.render);
-                this.listenTo(this.model, 'success', this.render);
+                this.listenTo(this.model, 'change', this.render);
             },
             render: function() {
                 this.$el.html(this._template(this.model.attributes));
