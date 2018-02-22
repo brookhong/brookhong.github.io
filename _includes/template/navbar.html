@@ -1,22 +1,30 @@
 <script type="text/x-template" id="navbar-template">
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#"></a>
+<nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
+  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item <%- activeSection === "posts" ? "active" : "" %>">
+        <a class="nav-link" href="#" section='posts'><%- home %></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Games
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/math4pupil">Math for pupil</a>
+          <div class="dropdown-divider"></div>
         </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li class='<%- activeSection === "posts" ? "active" : "" %>' data-toggle="collapse" data-target=".in"><a href="#" section='posts'><%- home %></a></li>
-                <li class='<%- activeSection === "profile" ? "active" : "" %>' data-toggle="collapse" data-target=".in"><a href="#" section='profile'><%- about %></a></li>
-                <li data-toggle="collapse" data-target=".in"><a href="#" id="changeLocale" locale="<%- locale %>"><%- locale %></a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+      </li>
+      <li class="nav-item <%- activeSection === "profile" ? "active" : "" %>">
+        <a class="nav-link" href="#" section='profile'><%- about %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" id="changeLocale" locale="<%- locale %>"><%- locale %></a>
+      </li>
+    </ul>
+  </div>
+</nav>
 </script>

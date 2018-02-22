@@ -30,7 +30,8 @@ require(
                 "keydown input": function(e) {
                     if (e.which === 13 || e.which === 9) {
                         var br = e.currentTarget.getBoundingClientRect();
-                        var result = { exp: this.data };
+                        this.data.answer = e.currentTarget.value;
+                        var result = { exp: JSON.parse(JSON.stringify(this.data)) };
                         if (e.currentTarget.value === this.data.expected) {
                             result.credit = 1;
                             document.querySelector("audio").play();

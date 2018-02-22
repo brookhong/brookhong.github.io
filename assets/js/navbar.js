@@ -4,7 +4,6 @@ define(
         'backbone',
         'underscore',
         'locale',
-        'bootstrap',
         'jquery-cookie'
     ],
     function(Backbone, _, localeData) {
