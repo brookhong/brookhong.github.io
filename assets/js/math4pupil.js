@@ -34,13 +34,12 @@ require(
                         if (e.currentTarget.value === this.data.expected) {
                             result.credit = 1;
                             document.querySelector("audio").play();
-                            this.render();
                         } else {
                             result.credit = -1;
                             e.currentTarget.focus();
                             $(e.currentTarget).val("");
                         }
-                        math4Pupil.credit({
+                        this.credit({
                             left: br.left,
                             top: br.top
                         }, result.credit);
@@ -84,6 +83,9 @@ require(
                     top: tp.top
                 }, 500, function() {
                     cf.hide();
+                    if (flag > 0) {
+                        math4Pupil.render();
+                    }
                 });
             },
             render: function() {
