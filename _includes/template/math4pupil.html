@@ -1,3 +1,9 @@
+<script type="text/x-template" id="math-set-template">
+    <div>
+    <span>Max number allowed: </span>
+    <input type=number style="width: 70px" />
+    </div>
+</script>
 <script type="text/x-template" id="math-content-template">
     <div>
     <span><%- para1 %></span>
@@ -11,6 +17,7 @@
     <div id="mathResultSummary">
         <div class="success">😁<span><%- success %></span></div>
         <div class="failure">😢<span><%- failure %></span></div>
+        <div class="timing"><%- timing %></div>
     </div>
     <div class="failedTests">
     <% for(var i = 0; i < failedTests.length; ++i) { %>

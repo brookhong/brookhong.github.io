@@ -25,10 +25,17 @@ require(
 
         var math4Pupil = new (Backbone.View.extend({
             el: $('#mathContent'),
+            setTemplate: _.template($("#math-set-template").html()),
             navTemplate: _.template($("#math-content-template").html()),
             events: {
                 "keydown input": function(e) {
                     if (e.which === 13 || e.which === 9) {
+                        if (this.max === null) {
+                            this.max = parseInt(e.currentTarget.value);
+                            this.render();
+                            mathResult.trigger('start');
+                            return;
+                        }
                         var br = e.currentTarget.getBoundingClientRect();
                         this.data.answer = e.currentTarget.value;
                         var result = { exp: JSON.parse(JSON.stringify(this.data)) };
@@ -58,11 +65,11 @@ require(
                 var negativeResult = false;
                 var data = {};
                 while (data.expected === undefined) {
-                    data.para1 = Math.ceil(Math.random()*100%20);
-                    data.para2 = Math.ceil(Math.random()*100%20);
+                    data.para1 = Math.ceil(Math.random()*100%this.max);
+                    data.para2 = Math.ceil(Math.random()*100%this.max);
                     data.operator1 = this.generateOperator();
                     data.expected = eval(data.para1 + data.operator1 + data.para2) + "";
-                    if (negativeResult || data.expected >= 0) {
+                    if (negativeResult || data.expected >= 0 && data.expected <= this.max) {
                         break;
                     } else {
                         data.expected = undefined;
@@ -93,21 +100,35 @@ require(
                 this.data = this.generate();
                 this.$el.html(this.navTemplate(this.data));
                 this.$el.find('input').focus();
+            },
+            start: function() {
+                this.max = null;
+                this.$el.html(this.setTemplate(this.data));
+                this.$el.find('input').focus();
             }
 
         }));
 
-        math4Pupil.render();
+        math4Pupil.start();
 
         var mathResult = new Backbone.Model({
             success: 0,
             failure: 0,
+            timing: "00:00:00",
             failedTests: []
+        });
+        mathResult.on('start', function(data) {
+            this.start = new Date().getTime();
+            setInterval(function() {
+                var lapse = new Date().getTime() - mathResult.start;
+                mathResult.attributes.timing = new Date(lapse).toISOString().substr(11, 8);
+                mathResult.trigger('change', {});
+            }, 1000);
         });
         mathResult.on('change', function(data) {
             if (data.credit > 0) {
                 this.attributes.success ++;
-            } else {
+            } else if (data.credit < 0) {
                 this.attributes.failure ++;
                 this.attributes.failedTests.push(data.exp);
             }
