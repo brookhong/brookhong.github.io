@@ -101,6 +101,9 @@ require(
                 this.$el.html(this.navTemplate(this.data));
                 this.$el.find('input').focus();
             },
+            disableInput: function(f) {
+                this.$el.find('input').attr('readonly', f);
+            },
             start: function() {
                 this.max = null;
                 this.$el.html(this.setTemplate(this.data));
@@ -132,10 +135,12 @@ require(
                 mathResult.attributes.timing = new Date(lapse).toISOString().substr(11, 8);
                 mathResult.trigger('change', {});
             }, 1000);
+            math4Pupil.disableInput(false);
         });
         mathResult.on('pause', function(data) {
             this.pause = new Date().getTime();
             clearInterval(this.timer);
+            math4Pupil.disableInput(true);
         });
         mathResult.on('change', function(data) {
             if (data.credit > 0) {
