@@ -119,11 +119,23 @@ require(
         });
         mathResult.on('start', function(data) {
             this.start = new Date().getTime();
-            setInterval(function() {
+            this.timer = setInterval(function() {
                 var lapse = new Date().getTime() - mathResult.start;
                 mathResult.attributes.timing = new Date(lapse).toISOString().substr(11, 8);
                 mathResult.trigger('change', {});
             }, 1000);
+        });
+        mathResult.on('resume', function(data) {
+            this.start = this.start + (new Date().getTime() - this.pause);
+            this.timer = setInterval(function() {
+                var lapse = new Date().getTime() - mathResult.start;
+                mathResult.attributes.timing = new Date(lapse).toISOString().substr(11, 8);
+                mathResult.trigger('change', {});
+            }, 1000);
+        });
+        mathResult.on('pause', function(data) {
+            this.pause = new Date().getTime();
+            clearInterval(this.timer);
         });
         mathResult.on('change', function(data) {
             if (data.credit > 0) {
@@ -139,7 +151,13 @@ require(
             el: $('#mathResult'),
             events: {
                 "click div.failure>span": function(e) {
-                    this.$el.find('div.failedTests').toggle();
+                    var ft = this.$el.find('div.failedTests');
+                    ft.toggle();
+                    if (ft.is(':visible')) {
+                        mathResult.trigger('pause');
+                    } else {
+                        mathResult.trigger('resume');
+                    }
                 }
             },
             _template: _.template($("#math-result-template").html()),
