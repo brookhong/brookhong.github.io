@@ -17,12 +17,27 @@ category: cn
 我下载了Chromium源码，给程序打了个补丁，单独放开了对Surfingkeys的限制，这样你就可以随处使用它了。
 
 ## 从onedrive.live.com下载
-* [Windows -- Chromium_installer 63.0.3238(Brook Build).exe](https://1drv.ms/u/s!AtpOdm9tOTsajTeRhgEm3RtyA9vO) md5 025ad56d311cacd369b03dfd0fde8126
-* [macOS -- Chromium 63.0.3238(Brook Build).dmg](https://1drv.ms/u/s!AtpOdm9tOTsajTZfQUPQJqVLJPtk) md5 2ae9f20612015cfa2c72193fd8aaf224
+
+### 67.0.3391
+* [Chromium 67.0.3391(Brook Build) For Mac](https://1drv.ms/u/s!AtpOdm9tOTsajVhFHNQ2pYukAuZJ) md5 584dd714f6ac96a90f5f990d20284662
+* [Chromium_installer 67.0.3391(Brook Build) For Windows](https://1drv.ms/u/s!AtpOdm9tOTsajVnDjh9DQzpG6-HQ) md5 77815be6f46339a64629519548ba1b00
+
+### 66.0.3329
+* [macOS -- Chromium 66.0.3329(Brook Build) For Mac](https://1drv.ms/u/s!AtpOdm9tOTsajVbxJY3q4yxu4w91) md5 1e6c9b070f4de31d96b8835e3ceb3f90
+
+### 63.0.3238
+* [Windows -- Chromium_installer 63.0.3238(Brook Build) For Windows](https://1drv.ms/u/s!AtpOdm9tOTsajTeRhgEm3RtyA9vO) md5 025ad56d311cacd369b03dfd0fde8126
+* [macOS -- Chromium 63.0.3238(Brook Build) For Mac](https://1drv.ms/u/s!AtpOdm9tOTsajTZfQUPQJqVLJPtk) md5 2ae9f20612015cfa2c72193fd8aaf224
 
 ## 从百度网盘下载
-* [Windows -- Chromium_installer 63.0.3238(Brook Build).exe](https://pan.baidu.com/s/1slv6kDB) md5 025ad56d311cacd369b03dfd0fde8126
-* [macOS -- Chromium 63.0.3238(Brook Build).dmg](https://pan.baidu.com/s/1dFetAkL) md5 2ae9f20612015cfa2c72193fd8aaf224
+
+### 67.0.3391
+* [Chromium 67.0.3391(Brook Build) For Mac](https://pan.baidu.com/s/1UCGN-n9zE3d5xlmRwuBJqw) md5 584dd714f6ac96a90f5f990d20284662
+* [Chromium_installer 67.0.3391(Brook Build) For Windows](https://pan.baidu.com/s/1mIA7MSGhBFkRvioDZNxQPQ) md5 77815be6f46339a64629519548ba1b00
+
+### 63.0.3238
+* [Windows -- Chromium_installer 63.0.3238(Brook Build) For Windows](https://pan.baidu.com/s/1slv6kDB) md5 025ad56d311cacd369b03dfd0fde8126
+* [macOS -- Chromium 63.0.3238(Brook Build) For Mac](https://pan.baidu.com/s/1dFetAkL) md5 2ae9f20612015cfa2c72193fd8aaf224
 
 
 ## 截屏

@@ -18,12 +18,27 @@ That's because the browser Chrome does not allow that for security reason.
 I fecthed Chromium source code, and created a patch to whitelist Surfingkeys, so that Surfingkeys could work on above pages.
 
 ## Download from onedrive.live.com
-* [Windows -- Chromium_installer 63.0.3238(Brook Build).exe](https://1drv.ms/u/s!AtpOdm9tOTsajTeRhgEm3RtyA9vO) md5 025ad56d311cacd369b03dfd0fde8126
-* [macOS -- Chromium 63.0.3238(Brook Build).dmg](https://1drv.ms/u/s!AtpOdm9tOTsajTZfQUPQJqVLJPtk) md5 2ae9f20612015cfa2c72193fd8aaf224
+
+### 67.0.3391
+* [Chromium 67.0.3391(Brook Build) For Mac](https://1drv.ms/u/s!AtpOdm9tOTsajVhFHNQ2pYukAuZJ) md5 584dd714f6ac96a90f5f990d20284662
+* [Chromium_installer 67.0.3391(Brook Build) For Windows](https://1drv.ms/u/s!AtpOdm9tOTsajVnDjh9DQzpG6-HQ) md5 77815be6f46339a64629519548ba1b00
+
+### 66.0.3329
+* [macOS -- Chromium 66.0.3329(Brook Build) For Mac](https://1drv.ms/u/s!AtpOdm9tOTsajVbxJY3q4yxu4w91) md5 1e6c9b070f4de31d96b8835e3ceb3f90
+
+### 63.0.3238
+* [Windows -- Chromium_installer 63.0.3238(Brook Build) For Windows](https://1drv.ms/u/s!AtpOdm9tOTsajTeRhgEm3RtyA9vO) md5 025ad56d311cacd369b03dfd0fde8126
+* [macOS -- Chromium 63.0.3238(Brook Build) For Mac](https://1drv.ms/u/s!AtpOdm9tOTsajTZfQUPQJqVLJPtk) md5 2ae9f20612015cfa2c72193fd8aaf224
 
 ## Download from pan.baidu.com
-* [Windows -- Chromium_installer 63.0.3238(Brook Build).exe](https://pan.baidu.com/s/1slv6kDB) md5 025ad56d311cacd369b03dfd0fde8126
-* [macOS -- Chromium 63.0.3238(Brook Build).dmg](https://pan.baidu.com/s/1dFetAkL) md5 2ae9f20612015cfa2c72193fd8aaf224
+
+### 67.0.3391
+* [Chromium 67.0.3391(Brook Build) For Mac](https://pan.baidu.com/s/1UCGN-n9zE3d5xlmRwuBJqw) md5 584dd714f6ac96a90f5f990d20284662
+* [Chromium_installer 67.0.3391(Brook Build) For Windows](https://pan.baidu.com/s/1mIA7MSGhBFkRvioDZNxQPQ) md5 77815be6f46339a64629519548ba1b00
+
+### 63.0.3238
+* [Windows -- Chromium_installer 63.0.3238(Brook Build) For Windows](https://pan.baidu.com/s/1slv6kDB) md5 025ad56d311cacd369b03dfd0fde8126
+* [macOS -- Chromium 63.0.3238(Brook Build) For Mac](https://pan.baidu.com/s/1dFetAkL) md5 2ae9f20612015cfa2c72193fd8aaf224
 
 
 ## Screenshots
