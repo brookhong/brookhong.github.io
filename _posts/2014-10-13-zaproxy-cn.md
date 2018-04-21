@@ -43,6 +43,9 @@ Chrome中的Developer Tools里有个Network页，可以监控浏览器出去的�
 
         keytool -import -keystore "C:\Program Files\Java\jdk1.7.0_51\jre\lib\security\cacerts" -file D:\owasp_zap_root_ca.cer -storepass changeit
 
+
+        sudo keytool -importcert -keystore $JAVA_HOME/jre/lib/security/cacerts -storepass changeit -file ~/owasp_zap_root_ca.cer
+
 1. 在你的应用中使用zaproxy，下面的示例在命令行中让一个java程序使用zaproxy提供的https代理
 
         java -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=8080 -cp .;d:\Downloads\json-20140107.jar JGet
