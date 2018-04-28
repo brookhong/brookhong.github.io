@@ -18,27 +18,15 @@ category: cn
 
 ## 从onedrive.live.com下载
 
-### 67.0.3391
-* [Chromium 67.0.3391(Brook Build) For Mac](https://1drv.ms/u/s!AtpOdm9tOTsajVhFHNQ2pYukAuZJ) md5 584dd714f6ac96a90f5f990d20284662
-* [Chromium_installer 67.0.3391(Brook Build) For Windows](https://1drv.ms/u/s!AtpOdm9tOTsajVnDjh9DQzpG6-HQ) md5 77815be6f46339a64629519548ba1b00
-
-### 66.0.3329
-* [macOS -- Chromium 66.0.3329(Brook Build) For Mac](https://1drv.ms/u/s!AtpOdm9tOTsajVbxJY3q4yxu4w91) md5 1e6c9b070f4de31d96b8835e3ceb3f90
-
-### 63.0.3238
-* [Windows -- Chromium_installer 63.0.3238(Brook Build) For Windows](https://1drv.ms/u/s!AtpOdm9tOTsajTeRhgEm3RtyA9vO) md5 025ad56d311cacd369b03dfd0fde8126
-* [macOS -- Chromium 63.0.3238(Brook Build) For Mac](https://1drv.ms/u/s!AtpOdm9tOTsajTZfQUPQJqVLJPtk) md5 2ae9f20612015cfa2c72193fd8aaf224
+### 最新稳定版 - 66.0.3359.139
+* [Chromium 66.0.3359.139(Brook Build).dmg](https://1drv.ms/u/s!AtpOdm9tOTsajVofrMkN01_NE_H4) md5 7cd64ab8c626a8dbb9f202f1122962de
+* [Chromium_installer 66.0.3359.139(Brook Build).exe](https://1drv.ms/u/s!AtpOdm9tOTsajVvpUWx6-9Ft2WR3) md5 7dc3f654875c147a7fc082993a6f3fa4
 
 ## 从百度网盘下载
 
-### 67.0.3391
-* [Chromium 67.0.3391(Brook Build) For Mac](https://pan.baidu.com/s/1UCGN-n9zE3d5xlmRwuBJqw) md5 584dd714f6ac96a90f5f990d20284662
-* [Chromium_installer 67.0.3391(Brook Build) For Windows](https://pan.baidu.com/s/1mIA7MSGhBFkRvioDZNxQPQ) md5 77815be6f46339a64629519548ba1b00
-
-### 63.0.3238
-* [Windows -- Chromium_installer 63.0.3238(Brook Build) For Windows](https://pan.baidu.com/s/1slv6kDB) md5 025ad56d311cacd369b03dfd0fde8126
-* [macOS -- Chromium 63.0.3238(Brook Build) For Mac](https://pan.baidu.com/s/1dFetAkL) md5 2ae9f20612015cfa2c72193fd8aaf224
-
+### 最新稳定版 - 66.0.3359.139
+* [Chromium 66.0.3359.139(Brook Build).dmg](https://pan.baidu.com/s/1PlqAGIDLf-g9dCXPwxb2Lw) md5 7cd64ab8c626a8dbb9f202f1122962de
+* [Chromium_installer 66.0.3359.139(Brook Build).exe](https://pan.baidu.com/s/1zIaPYzLHBUHzz1VfDIaKTg) md5 7dc3f654875c147a7fc082993a6f3fa4
 
 ## 截屏
 
