@@ -67,7 +67,7 @@ Edit my main.vim to include vimpack folder into `packpath`:
 Now the steps to install/update YouCompleteMe changed to
 
     1. git submodule update --init --recursive
-    2. ./vimpack/pack/plugins/opt/YouCompleteMe/install.py --java-completer
+    2. ./vimpack/pack/plugins/opt/YouCompleteMe/install.py --java-completer --clang-completer
 
 Then I could rsync my vimfiles safely without breaking my YouCompleteMe installation, and I could load YouCompleteMe on demand with `std`(my vim leader key is `s`).
 
