@@ -19,15 +19,15 @@ I fecthed Chromium source code, and created a patch to whitelist Surfingkeys, so
 
 ## Download from onedrive.live.com
 
-### Latest stable - 66.0.3359.139
-* [Chromium 66.0.3359.139(Brook Build).dmg](https://1drv.ms/u/s!AtpOdm9tOTsajVofrMkN01_NE_H4) md5 7cd64ab8c626a8dbb9f202f1122962de
-* [Chromium_installer 66.0.3359.139(Brook Build).exe](https://1drv.ms/u/s!AtpOdm9tOTsajVvpUWx6-9Ft2WR3) md5 7dc3f654875c147a7fc082993a6f3fa4
+### Latest stable - 70.0.3538.102
+* [Chromium 70.0.3538.102(Brook Build).dmg](https://1drv.ms/u/s!AtpOdm9tOTsajkFKDMnotaSkF_Eq) md5 1509a6ffc0cc7f30bdc58f1d51b4fba1
+* [Chromium_installer 70.0.3538.102(Brook Build).exe](https://1drv.ms/u/s!AtpOdm9tOTsajkAqg4gbaEaJ9H07) md5 c8779be6c2f0a34778feab4e5d904617
 
 ## Download from pan.baidu.com
 
-### Latest stable - 66.0.3359.139
-* [Chromium 66.0.3359.139(Brook Build).dmg](https://pan.baidu.com/s/1PlqAGIDLf-g9dCXPwxb2Lw) md5 7cd64ab8c626a8dbb9f202f1122962de
-* [Chromium_installer 66.0.3359.139(Brook Build).exe](https://pan.baidu.com/s/1zIaPYzLHBUHzz1VfDIaKTg) md5 7dc3f654875c147a7fc082993a6f3fa4
+### Latest stable - 70.0.3538.102
+* [Chromium 70.0.3538.102(Brook Build).dmg](https://pan.baidu.com/s/1Q7eeAtUuD3RFr-3DBcGDjg) md5 1509a6ffc0cc7f30bdc58f1d51b4fba1
+* [Chromium_installer 70.0.3538.102(Brook Build).exe](https://pan.baidu.com/s/1SWlxQPj5MlZqUWv_Dw9aXQ) md5 c8779be6c2f0a34778feab4e5d904617
 
 ## Screenshots
 
