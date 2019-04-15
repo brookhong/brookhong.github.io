@@ -106,3 +106,7 @@ For example,
         '/usr/include',
     ]
 ```
+## Troubleshooting
+### Your C++ compiler does NOT fully support C++11.
+1. Download a newer gcc and build it.
+1. CXX=~/Desktop/gcc-8.3.0-release/bin/g++ ./install.py --java-completer --clang-completer
