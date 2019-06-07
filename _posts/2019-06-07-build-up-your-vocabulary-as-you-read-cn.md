@@ -27,7 +27,7 @@ category: cn
 * 碰到不会的直接点一下，套用那句著名的广告语，就是——哪里不会点哪里，so easy。
 * 收录所有你点过的生词，你可以通过flash card来温习。
 
-希望这个APP对大家有所帮助，最重要重要重要的还是坚持，Dictorium所做的也只是帮助你坚持，你可以从[Dictorium - on Google Play](https://play.google.com/store/apps/details?id=com.brook.dictorium)这里安装，下面是几个截图。
+希望这个APP对大家有所帮助，最重要重要重要的还是坚持，Dictorium所做的也只是帮助你坚持，你可以从[Dictorium - on Google Play](https://play.google.com/store/apps/details?id=com.brook.dictorium)这里安装，也可以从[这里](https://brookhong.github.io/assets/downloads/Dictorium_v1.2.apk)直接下载，下面是几个截图。
 
 ## Tap to translate
 ![tap_to_translate](https://user-images.githubusercontent.com/288207/59078358-5a10a380-8911-11e9-8d4e-59cc45ed09d0.png)
