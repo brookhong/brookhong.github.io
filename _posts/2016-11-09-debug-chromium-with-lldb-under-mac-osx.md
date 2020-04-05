@@ -11,6 +11,13 @@ After Chromium.app is built successfully, launch it, then start lldb
 
     $ lldb "/works/depot_tools/src/out/Default/Chromium.app/Contents/Versions/60.0.3077.0/Chromium Helper.app/Contents/MacOS/Chromium Helper"
 
+If you can not list source code properly, it may because that you are running `lldb` in a different working directory, try below command to set the right one:
+
+    platform settings -w /works/depot_tools/chromium/src/out/Debug/
+
+    (lldb) source info
+    Lines found in module `libblink_core.dylib
+    [0x000000018ab89f5a-0x000000018ab89f79): /works/depot_tools/chromium/src/third_party/blink/renderer/platform/heap/visitor.h:114:5
 
 ## Debugging existing Tab
 
