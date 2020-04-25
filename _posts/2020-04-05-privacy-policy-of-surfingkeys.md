@@ -28,7 +28,6 @@ In order to perform actions with shortcuts, the extension will request below per
 * `topSites` to quickly launch URL from topSites with Omnibar.
 * `clipboardRead` to launch URL form clipboard.
 * `clipboardWrite` to copy page URL/title with shortcut, copy selection in visual mode.
-* `webRequest*` for the extension to intercept network errors to display built-in page to toggle proxy.
 * `proxy` for the extension to quickly switch proxy.
 
 ## Data collection

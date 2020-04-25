@@ -25,6 +25,11 @@ But there are some changes,
 * DiffMerge is not in the list anymore, as I'm getting more used to vim diff.
 * chrome is still firmly in this list.
 
+And my lovely keyboards
+
+* [Apple Magic Keyboard (Wireless, Rechargable)](https://amzn.to/3aInYIu)
+* [Logitech K840 Mechanical Keyboard with Romer G mechanical Switches for PC](https://amzn.to/3cVfAHg)
+
 When it comes to chrome, we must talk about a particular chrome extension. I may list my favorite chrome extensions someday but there are some particulare extensions that brings the vim spirit to chrome. I used [philc/vimium](https://github.com/philc/vimium) for almost one year, then I switched to [1995eaton/chromium-vim](https://github.com/1995eaton/chromium-vim) for half a year.
 
 I'm almost happy with these two but as more and more of my daily tasks need to be done in chrome, I need a better extension.
