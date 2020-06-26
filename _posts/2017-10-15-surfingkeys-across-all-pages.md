@@ -17,17 +17,11 @@ That's because the browser Chrome does not allow that for security reason.
 
 I fecthed Chromium source code, and created a patch to whitelist Surfingkeys, so that Surfingkeys could work on above pages.
 
-## Download from onedrive.live.com
+A built-in dictionary is also implemented on Chromium now, please see [Chromium build with a built-in dictionary](https://brookhong.github.io/2020/06/26/chromium-build-with-a-built-in-dictionary.html)
 
-### Latest stable - 70.0.3538.102
-* [Chromium 70.0.3538.102(Brook Build).dmg](https://1drv.ms/u/s!AtpOdm9tOTsajkFKDMnotaSkF_Eq) md5 1509a6ffc0cc7f30bdc58f1d51b4fba1
-* [Chromium_installer 70.0.3538.102(Brook Build).exe](https://1drv.ms/u/s!AtpOdm9tOTsajkAqg4gbaEaJ9H07) md5 c8779be6c2f0a34778feab4e5d904617
-
-## Download from pan.baidu.com
-
-### Latest stable - 70.0.3538.102
-* [Chromium 70.0.3538.102(Brook Build).dmg](https://pan.baidu.com/s/1Q7eeAtUuD3RFr-3DBcGDjg) md5 1509a6ffc0cc7f30bdc58f1d51b4fba1
-* [Chromium_installer 70.0.3538.102(Brook Build).exe](https://pan.baidu.com/s/1SWlxQPj5MlZqUWv_Dw9aXQ) md5 c8779be6c2f0a34778feab4e5d904617
+### Latest stable - 83.0.4103.116
+* [Chromium 83.0.4103.116(Brook Build).dmg](https://1drv.ms/u/s!AtpOdm9tOTsalghP6PC9yVO6jyg_?e=Qwyy5m) md5 a59e3736db317b5b203fc38ef5832839
+* [Chromium_installer 83.0.4103.116(Brook Build).exe](https://1drv.ms/u/s!AtpOdm9tOTsalgay-tiMx_zKYM_5?e=dUKUId) md5 b3f946af294be51c0a7def0080055e96
 
 ## Screenshots
 

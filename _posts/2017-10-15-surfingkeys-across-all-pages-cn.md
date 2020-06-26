@@ -16,17 +16,11 @@ category: cn
 出现这种情况是因为Chrome浏览器禁止在这些页面加载任何普通扩展程序。
 我下载了Chromium源码，给程序打了个补丁，单独放开了对Surfingkeys的限制，这样你就可以随处使用它了。
 
-## 从onedrive.live.com下载
+另外，给Chromium增加了内嵌字典功能，请看[自带字典的Chromium浏览器](https://brookhong.github.io/2020/06/26/chromium-build-with-a-built-in-dictionary-cn.html)
 
-### 最新稳定版 - 70.0.3538.102
-* [Chromium 70.0.3538.102(Brook Build).dmg](https://1drv.ms/u/s!AtpOdm9tOTsajkFKDMnotaSkF_Eq) md5 1509a6ffc0cc7f30bdc58f1d51b4fba1
-* [Chromium_installer 70.0.3538.102(Brook Build).exe](https://1drv.ms/u/s!AtpOdm9tOTsajkAqg4gbaEaJ9H07) md5 c8779be6c2f0a34778feab4e5d904617
-
-## 从百度网盘下载
-
-### 最新稳定版 - 70.0.3538.102
-* [Chromium 70.0.3538.102(Brook Build).dmg](https://pan.baidu.com/s/1Q7eeAtUuD3RFr-3DBcGDjg) md5 1509a6ffc0cc7f30bdc58f1d51b4fba1
-* [Chromium_installer 70.0.3538.102(Brook Build).exe](https://pan.baidu.com/s/1SWlxQPj5MlZqUWv_Dw9aXQ) md5 c8779be6c2f0a34778feab4e5d904617
+### 最新稳定版 - 83.0.4103.116
+* [Chromium 83.0.4103.116(Brook Build).dmg](https://pan.baidu.com/s/1noUi4Jdx2AxgYnevwfY9Hw)（提取码: jpp9） md5 a59e3736db317b5b203fc38ef5832839
+* [Chromium_installer 83.0.4103.116(Brook Build).exe](https://pan.baidu.com/s/1cdFx6wZp1GKPZWDqva0OgA) （提取码: qur7）md5 b3f946af294be51c0a7def0080055e96
 
 ## 截屏
 
