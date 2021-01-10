@@ -8,9 +8,13 @@ category: cn
 {{ page.title }}
 ================
 
-[Chrome版供墙内的同学下载](/assets/downloads/Surfingkeys.crx)
-[火狐版](https://addons.mozilla.org/en-US/firefox/addon/surfingkeys_ff/)
+## 安装
 
+* [Surfingkeys - Chrome Web Store](https://chrome.google.com/webstore/detail/surfingkeys/gfbliohnnapiefjpjlpjnehglfpaknnc)
+* [Surfingkeys – Get this Extension for 🦊 Firefox](https://addons.mozilla.org/en-US/firefox/addon/surfingkeys_ff/)
+* [Surfingkeys - Microsoft Edge Addons](https://microsoftedge.microsoft.com/addons/detail/kgnghhfkloifoabeaobjkgagcecbnppg)
+
+## 简介
 Surfingkeys和现有的一些插件一样，让你尽可能的通过键盘来使用chrome浏览器，比如跳转网页，上下左右滚屏。但不只是给vim用户使用，Surfingkeys的基本特性是让你自己写一段Javascript脚本，然后通过`mapkey`映射到某些按键。之后当你按了那几个键以后，对应的Javascript脚本就会被执行。
 
 Surfingkeys的配置全部写在一段javascript中，很容易添加自己的映射按键。如：
@@ -22,6 +26,14 @@ Surfingkeys的配置全部写在一段javascript中，很容易添加自己的�
 [配置参考](#配置参考).
 
 [演示](http://video.weibo.com/show?fid=1034:640920e0b7aa80e3a2f987c1091a7e45)
+
+### 关于浏览器限制
+
+无论是Chromium家族的Chrome/Edge还是Firefox，都有一些特殊的页面是禁用任何插件的，比如chrome://XXXXX之类的页面、[Chrome Webstore](https://chrome.google.com/webstore/category/extensions)。这种限制是无法通过Javascript或者某些配置来绕开的。为了突破这种限制，我一般是使用自己编译的Chromium，如果大家有需要可以在[这里](https://pan.baidu.com/s/1KQ5B298a7XCEQEIIR5u39A#list/path=%2Fchromium_release)（提取码: 4d3u）下载（Windows系统用户请下载Chromium_installer.exe，MacOS系统用户请下载Chromium.dmg）。我会不定期的更新这个定制版的Chromium，基于Chrome的稳定版。当前这个定制版包含了以下改动：
+
+1. [放开对Surfingkeys的限制，使得它可以在所有页面上使用。](https://brookhong.github.io/2017/10/15/surfingkeys-across-all-pages-cn.html)
+1. 在Chromium里内嵌一个取词翻译的功能，如果你需要这个功能，请按照[这里](https://brookhong.github.io/2020/06/26/chromium-build-with-a-built-in-dictionary-cn.html)的步骤下载安装一个dictorium.db的文件到指定目录，Surfingkeys也提供了对Dictorium的支持。
+1. 禁用了浏览器自带的Ctrl-n/Ctrl-p快捷，这样就可以按照[这里](https://brookhong.github.io/2019/04/15/ctrl-p-and-ctrl-n-for-google.html)设置在输入框里用Ctrl-n/Ctrl-p来选择下一个/上一个选项。
 
 ## 功能特性
 * 所有配置都用javascript描述，易于修改添加自己的按键。

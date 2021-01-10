@@ -14,12 +14,14 @@ category: cn
 
 这样，Chromium就是兼具词典功能的浏览器了。那么如何使用呢？
 
-1. 第一步你需要下载安装我编译的[Chromium](https://pan.baidu.com/s/1cdFx6wZp1GKPZWDqva0OgA)（提取码: qur7）
-1. 第二步你需要安装一个词典文件————[dictorium.db](https://pan.baidu.com/s/16i3RA2ymmBq8K3OmvObkqw)（提取码: p6dp），如果找不到合适的，你可以用[SqliteDictBuilder](https://github.com/brookhong/SqliteDictBuilder)生成自己的词典。
+在[这里](https://pan.baidu.com/s/1KQ5B298a7XCEQEIIR5u39A#list/path=%2Fchromium_release)（提取码: 4d3u），
+
+1. Windows系统用户请下载Chromium_installer.exe，MacOS系统用户请下载Chromium.dmg。
+1. 然后你需要下载那个词典文件————dictorium.db，如果找不到合适的，你可以用[SqliteDictBuilder](https://github.com/brookhong/SqliteDictBuilder)生成自己的词典。
 
 ### 安装词典
 
-只要把词典文件`dictorium.db`放到下载目录下就可以，比如Windows下的`C:\Users\Administrator\Downloads`。或者你也可以在[chrome://settings/dict](chrome://settings/dict)指定`dictorium.db`所在的目录。
+只要把词典文件`dictorium.db`放到下载目录下就可以，比如Windows下的`C:\Users\Administrator\Downloads`。或者你也可以在`chrome://settings/dict`指定`dictorium.db`所在的目录。
 
 ### 取词翻译
 
@@ -31,10 +33,15 @@ category: cn
 
 ![image](https://user-images.githubusercontent.com/288207/85875697-344d8980-b807-11ea-9e59-97d28d91f467.png)
 
-这个功能默认情况下是对所有网站都启用的，你可以在[chrome://settings/content/dict](chrome://settings/content/dict)来自定义在哪些网站是否打开。此外，你可以按住`Alt`来临时切换这个设置，比如，你在[https://www.quora.com](https://www.quora.com)禁用点击获取解释的功能，但如果你点击某个单词的同时按住了`Alt`，该单词的解释同样会被弹出。
+这个功能默认情况下是对所有网站都启用的，你可以在`chrome://settings/content/dict`来自定义在哪些网站是否打开。此外，你可以按住`Alt`来临时切换这个设置，比如，你在[https://www.quora.com](https://www.quora.com)禁用点击获取解释的功能，但如果你点击某个单词的同时按住了`Alt`，该单词的解释同样会被弹出。
 
 ### 在地址栏里查单词
 
 你需要按`d `（d加空格）来激活它，这样做是避免破坏网址的自动匹配功能。比如，你在地址栏里输入`d smi`，地址栏的匹配会变成这样（注意除了d加空格你至少输入3个字符才会弹出匹配结果）。
 
 ![image](https://user-images.githubusercontent.com/288207/85426910-acb90e00-b5ad-11ea-943e-970240c0eead.png)
+
+### 查询历史
+
+在地址栏输入`chrome://dictorium/`，你会看到所有查阅过的单词。
+![image](https://user-images.githubusercontent.com/288207/104154783-b8bcce00-5420-11eb-900a-cc28aed74e98.png)

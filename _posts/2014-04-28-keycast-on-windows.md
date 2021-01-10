@@ -18,10 +18,6 @@ No binary provided now.
 
 Please checkout [the code](https://github.com/brookhong/KeyCastOW).
 
-## My lovely keyboards
-* [Apple Magic Keyboard (Wireless, Rechargable)](https://amzn.to/3aInYIu)
-* [Logitech K840 Mechanical Keyboard with Romer G mechanical Switches for PC](https://amzn.to/3cVfAHg)
-
 ## History
 
 ### 2017-01-29 2.0.2.5
