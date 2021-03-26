@@ -6,6 +6,13 @@ category: en
 
 {{ page.title }}
 ================
+## Privacy Policy of Dictorium Android App
+
+Dictorium Android App will NOT collect any user data. All user data are stored on their own devices, and can be removed from user interfaces.
+
+The only permission that this App requires is Storage, which is for users to store their picked new words from reading online. There are some extra data stored too, such as rates of users on how much they know their new words, which are used in Flash card in the App. Again all these data are stored on their own devices and will NOT be collected by any means.
+
+## Introduction
 
 There are some issues when you try to memorize new words,
 1. how to uphold the thing
