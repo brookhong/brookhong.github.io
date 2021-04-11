@@ -18,7 +18,7 @@ require(
     ],
     function(Navbar, brook_ga) {
         function createTOC() {
-            var heads = $("h1, h2, h3, h4, h5, h6").toArray(), lines = [], last = 0;
+            var heads = document.querySelectorAll("h1, h2, h3, h4, h5, h6"), lines = [], last = 0;
 
             for (var i = 0; i < heads.length; i++) {
                 var level = parseInt(heads[i].tagName[1]);
@@ -42,15 +42,13 @@ require(
 
             if (heads.length > 1) {
                 var html = lines.join("\n");
-                $("#toc").html(html);
-                $("#toc").find("li").each(function(i) {
+                document.querySelector("#toc").innerHTML = html;
+                document.querySelectorAll("#toc li").forEach(function(li, i) {
                     var h = heads[i];
-                    $(this).click(function() {
-                        brook_ga('send', 'event', 'toc_click', window.location.href, $(this).text());
-                        $('html, body').animate({
-                            scrollTop: $(h).offset().top - $('div.navbar-fixed-top').height()
-                        }, 500);
-                    });
+                    li.onclick = function() {
+                        brook_ga('send', 'event', 'toc_click', window.location.href, this.innerText);
+                        document.scrollingElement.scrollTop += h.getBoundingClientRect().top - document.querySelector('nav.fixed-top').offsetHeight;
+                    };
                 });
             }
         }
@@ -60,8 +58,26 @@ require(
 
         createTOC();
 
-        $('a').click(function() {
-            brook_ga('send', 'event', 'outbound', this.href, $(this).text());
+        document.querySelectorAll("a").forEach(function(a) {
+            a.onclick = function() {
+                brook_ga('send', 'event', 'outbound', this.href, this.innerText);
+            };
         });
+
+        var imgPopup = document.createElement("div");
+        imgPopup.id = "imgPopup";
+        imgPopup.style.display = "none";
+        imgPopup.innerHTML = "<img />";
+        document.body.append(imgPopup);
+
+        document.querySelectorAll("#content img").forEach(function(img) {
+            img.onclick = function(e) {
+                imgPopup.querySelector('img').src = img.src;
+                imgPopup.style.display = "";
+            };
+        });
+        imgPopup.onclick = () => {
+            imgPopup.style.display = "none";
+        };
     }
 );
