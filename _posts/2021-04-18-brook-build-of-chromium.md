@@ -26,6 +26,21 @@ There is a command line switch `--whitelisted-extension` added so that you could
 ![Surfingkeys_on_webstore](https://user-images.githubusercontent.com/288207/31577261-c7ca6e1c-b0d0-11e7-9da1-c4c0732214de.png)
 ![Surfingkeys_on_extensions](https://user-images.githubusercontent.com/288207/31435705-282aaf70-ae46-11e7-8487-1792bdd5fd2c.png)
 
+## Ctrl-L (Command -L on Mac) twice to switch focus back to page content.
+
+To use those keyboard based navigation extensions such as Surfingkeys or Vimium, you always need to focus page content first, otherwise it won't work for most cases. [This page](https://brookhong.github.io/2018/11/18/bring-focus-back-to-page-content-from-address-bar.html) provides some tricky solutions for Google Chrome.
+
+This feature is to provide a way to focus page out of box, you press `Ctrl-L` to focus address bar, then press `Ctrl-L` again to bring focus back to page. Basically `Ctrl-L` will be the shortcut to switch focus between address bar and page content back and forth.
+
+## `Ctrl-N` as `↓` and `Ctrl-P` as `↑` everywhere
+
+This feature is small but very easy for people to be addicted to. Under Mac OS, in URL bar of Chrome, if you type something there will be some URL suggestions listed out, you can use `↓` or `↑` to choose one, but you can also use `Ctrl-N` or `Ctrl-P` to navigate the URL suggestions. You'll love `Ctrl-N` and `Ctrl-P` in such cases after you got used to them. Then you come to a Windows or Linux machine some day, you use `Ctrl-N` to navigate down the URL suggestions, but it just opens a new Window. Neither does `Ctrl-P` do want you want.
+
+Such suggestion cases also exist on HTML pages, for example, suggestions from input box of search engine like Google, plain input box of a form when you enable auto fill. Unfortunately `Ctrl-N` or `Ctrl-P` does not work with Chromium too in these cases under Mac, neither under Windows or Linux. You could make it work in some cases with Surfingkeys, see [Ctrl-p and Ctrl-n for Google](https://brookhong.github.io/2019/04/15/ctrl-p-and-ctrl-n-for-google.html), but it is not universal, the code snippet for Surfingkeys only works under Mac, as `Ctrl-N` and `Ctrl-P` are registered as system shortcuts of Chromium itself under Windows and Linux. Even under Mac the code snippet is just for the input box of Google, if you want it work on other sites, you will have to make corresponding changes. Even you're a Javascript guru, you would never make it work for the case of plain input box in a form with auto fill, as such suggestions are not populated within Javascript context.
+
+This feature turns `Ctrl-N` into `↓` and `Ctrl-P` into `↑` for all the cases above without any Javascript work, of course you don't either have to install Surfingkeys. It just works out of box. There is a setting for you under Windows or Linux -- to treat `Ctrl-N` or `Ctrl-P` as `↓` or `↑` only when focus is in a input box.
+![ctlr_n_settings](https://user-images.githubusercontent.com/288207/114701122-f6e5c880-9d54-11eb-8b87-9c47d5754703.png)
+
 ## Dictorium, a built-in dictionary
 
 This feature is turned off by default, until you put a dictionary file named `dictorium.db` under a specific path (same as your `Downloads` folder by default, you could customize the path if you prefer to a different one on `chrome://settings/dict`.) [Here](https://1drv.ms/u/s!AtpOdm9tOTsajTM-iSDL6dhnb46o?e=zkVgua) is a prebuilt one, which is just a English-Chinese dictionary. You could build your own with [SqliteDictBuilder](https://github.com/brookhong/SqliteDictBuilder) if you can not find a proper one.
@@ -52,12 +67,3 @@ To query word directly from URL address bar, you need input `d `(d followed with
 ![query_in_address_bar](https://user-images.githubusercontent.com/288207/85426910-acb90e00-b5ad-11ea-943e-970240c0eead.png)
 
 Dictorium is also well integrated with Surfingkeys, `Q` from Surfingkeys can use Dictorium directly.
-
-## `Ctrl-N` as `↓` and `Ctrl-P` as `↑` everywhere
-
-This feature is small but very easy for people to be addicted to. Under Mac OS, in URL bar of Chrome, if you type something there will be some URL suggestions listed out, you can use `↓` or `↑` to choose one, but you can also use `Ctrl-N` or `Ctrl-P` to navigate the URL suggestions. You'll love `Ctrl-N` and `Ctrl-P` in such cases after you got used to them. Then you come to a Windows or Linux machine some day, you use `Ctrl-N` to navigate down the URL suggestions, but it just opens a new Window. Neither does `Ctrl-P` do want you want.
-
-Such suggestion cases also exist on HTML pages, for example, suggestions from input box of search engine like Google, plain input box of a form when you enable auto fill. Unfortunately `Ctrl-N` or `Ctrl-P` does not work with Chromium too in these cases under Mac, neither under Windows or Linux. You could make it work in some cases with Surfingkeys, see [Ctrl-p and Ctrl-n for Google](https://brookhong.github.io/2019/04/15/ctrl-p-and-ctrl-n-for-google.html), but it is not universal, the code snippet for Surfingkeys only works under Mac, as `Ctrl-N` and `Ctrl-P` are registered as system shortcuts of Chromium itself under Windows and Linux. Even under Mac the code snippet is just for the input box of Google, if you want it work on other sites, you will have to make corresponding changes. Even you're a Javascript guru, you would never make it work for the case of plain input box in a form with auto fill, as such suggestions are not populated within Javascript context.
-
-This feature turns `Ctrl-N` into `↓` and `Ctrl-P` into `↑` for all the cases above without any Javascript work, of course you don't either have to install Surfingkeys. It just works out of box. There is a setting for you under Windows or Linux -- to treat `Ctrl-N` or `Ctrl-P` as `↓` or `↑` only when focus is in a input box.
-![ctlr_n_settings](https://user-images.githubusercontent.com/288207/114701122-f6e5c880-9d54-11eb-8b87-9c47d5754703.png)
