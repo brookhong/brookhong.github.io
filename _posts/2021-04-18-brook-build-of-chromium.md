@@ -21,7 +21,7 @@ The feature allows Surfingkeys on some pages where Chrome Extensions are forbidd
 
 So that you could use keyboard to navigate through all the tabs in your browser. The change is limited only to Surfingkeys extension by default, if you don't install Surfingkeys, this change does not make any difference from Chromium official release for you. It will not leak any permission to other extension.
 
-There is a command line switch `--whitelisted-extension` added so that you could whilelist any other extension you'd like, for example, appending `--whitelisted-extension=dbepggeogbaibhgnhhndojpepiihcmeb` would enable `vimium` on those forbidden pages.
+There is a command line switch `--whitelisted-extension` added so that you could whitelist any other extension you'd like, for example, appending `--whitelisted-extension=dbepggeogbaibhgnhhndojpepiihcmeb` would enable `vimium` on those forbidden pages.
 
 ![Surfingkeys_on_webstore](https://user-images.githubusercontent.com/288207/31577261-c7ca6e1c-b0d0-11e7-9da1-c4c0732214de.png)
 ![Surfingkeys_on_extensions](https://user-images.githubusercontent.com/288207/31435705-282aaf70-ae46-11e7-8487-1792bdd5fd2c.png)
