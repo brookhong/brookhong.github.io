@@ -11,6 +11,22 @@ Years ago I started to use my own build of Chromium, now it becomes my necessity
 ## Download
 [chromium_release - OneDrive](https://1drv.ms/u/s!AtpOdm9tOTsajTM-iSDL6dhnb46o?e=zkVgua), please download corresponding installer package with your OS, the exe file for Widnows, the dmg file for Mac, and the deb file for Linux.
 
+# Features
+
+## Hermit tab that works like Container Tab from Firefox.
+
+A new feature that was introduced from `130.0.6723.97` to let you to create a new tab with another profile in the same Chromium window, so that you can sign in a site with account A in one tab and the same site with another account B in another tab, which is called hermit tab. The hermit tab will have a different color in its title bar and address bar. For example, here I have my account signed in github in one tab, and not signed in github in a hermit tab.
+
+![Hermit_Tab](https://github.com/user-attachments/assets/7fc03e21-66bc-4505-9f69-52e8c1fb8ca6)
+
+
+To create a new hermit tab, just click the 3 dots button on top right corner, then click `New Hermit Tab`.
+![new_Hermit_Tab](https://github.com/user-attachments/assets/e7d1d76a-2b69-437a-b4b3-b98f07ece72d)
+
+## Option to hide tab strip
+
+![Hide tab strip](https://github.com/user-attachments/assets/0f543c73-6678-4178-ab46-29a8ed6be9b6)
+
 ## Whitelist Surfingkeys on some pages where Chrome extensions are forbidden.
 
 The feature allows Surfingkeys on some pages where Chrome Extensions are forbidden such as

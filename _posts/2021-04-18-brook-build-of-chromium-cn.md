@@ -11,6 +11,21 @@ category: cn
 ## 下载
 点[这里](https://pan.baidu.com/s/1KQ5B298a7XCEQEIIR5u39A#list/path=%2Fchromium_release)（提取码: 4d3u），根据你的操作系统选择相应的文件，Windows选择Chromium_installer.exe，Mac选择Chromium.dmg，Linux选择Chromium.deb。
 
+# 功能
+
+## 类似Firefox Container Tab的寄居标签页
+
+从`130.0.6723.97`开始引入这个寄居标签页的功能，让你可以在不同的标签页用不同的账号登录同一个网站。这种寄居标签页会在标题栏和地址栏用不同的颜色加以区分。比如，这里我是在一个标签页登录了github，而在另一个寄居标签页则没有登录任何账号。
+
+![Hermit_Tab](https://github.com/user-attachments/assets/7fc03e21-66bc-4505-9f69-52e8c1fb8ca6)
+
+点击浏览器右上角的三个点，然后选择`寄居标签页`。
+![new_Hermit_Tab](https://github.com/user-attachments/assets/4d0e4e9d-8131-4179-ae3f-565dec791908)
+
+## 提供隐藏标题栏的选项。
+
+![Hide tab strip](https://github.com/user-attachments/assets/0f543c73-6678-4178-ab46-29a8ed6be9b6)
+
 ## 在Chrome禁用的页面使用Surfingkeys
 
 这个功能允许在禁用Chrome插件的页面上使用Surfingkeys，比如
