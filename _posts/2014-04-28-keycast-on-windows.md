@@ -13,9 +13,16 @@ keystroke visualizer for Windows,  lets you easily display your keystrokes while
 * green and portable, only depends on windows system dlls
 * prenty of settings for keystroke display
 * hotkey to turn on/off
+* Draw/mark anywhere on your screen(Paid version only)
 
-[Purchase from Microsoft Store](https://apps.microsoft.com/detail/9nwztztb05pg)
-[Source code](https://github.com/brookhong/KeyCastOW).
+## Install
+
+* [Purchase from Microsoft Store](https://apps.microsoft.com/detail/9nwztztb05pg)
+* [Source code for legacy version](https://github.com/brookhong/KeyCastOW).
+
+## What's new in paid version from Microsoft Store
+* modern monitor supports
+* Draw/mark anywhere on your screen -- [Demo](https://youtu.be/Px2pqiGuSIQ)
 
 ## Privacy and security
 
